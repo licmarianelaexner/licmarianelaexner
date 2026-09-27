@@ -94,7 +94,7 @@
       font-size: 1.15rem;
       font-weight: 600;
       color: var(--primary);
-      margin-bottom: 1.8rem;
+      margin-bottom: 2rem;
       line-height: 1.5;
     }
 
@@ -102,22 +102,32 @@
       margin-bottom: 0.4rem;
     }
 
-    /* Contenedor de las frases en recuadros */
-    .boxes-container {
+    /* Lista estilizada y limpia para los ítems */
+    .feature-list {
       display: flex;
       flex-direction: column;
-      gap: 0.9rem;
+      gap: 1.1rem;
+      padding-left: 0.5rem;
     }
 
-    .info-box {
-      background-color: var(--white);
-      padding: 1rem 1.2rem;
-      border-radius: 10px;
-      border-left: 4px solid var(--secondary);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-      color: var(--text-dark);
-      font-size: 0.98rem;
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.02rem;
       font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    /* Punto decorativo sutil */
+    .feature-item::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--secondary);
+      flex-shrink: 0;
     }
 
     .hero-image {
@@ -277,6 +287,11 @@
         margin: 1.5rem auto;
       }
 
+      .feature-list {
+        align-items: flex-start;
+        text-align: left;
+      }
+
       .contact-buttons {
         flex-direction: column;
         align-items: stretch;
@@ -306,14 +321,14 @@
           <p>Un espacio para aprender, formarse y compartir el ser y hacer de la psicopedagogía.</p>
         </div>
         
-        <div class="boxes-container">
-          <div class="info-box">
+        <div class="feature-list">
+          <div class="feature-item">
             Acompaño elecciones, transiciones y proyectos de vida.
           </div>
-          <div class="info-box">
+          <div class="feature-item">
             Acompaño trayectorias en educación superior y neurodivergencias.
           </div>
-          <div class="info-box">
+          <div class="feature-item">
             Comparto formación y experiencia en talleres y capacitaciones.
           </div>
         </div>
