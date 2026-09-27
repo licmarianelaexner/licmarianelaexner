@@ -98,7 +98,7 @@
       font-size: 2.2rem;
       font-weight: 700;
       color: var(--primary);
-      line-height: 1.2;
+      line-height: 1.25;
       margin-bottom: 1.2rem;
     }
 
@@ -143,93 +143,53 @@
     /* 2. Sección Diferencial / Propuesta de Valor */
     .differential-section {
       background-color: var(--white);
-      padding: 4rem 2rem;
+      padding: 4.5rem 2rem;
       border-top: 1px solid #EAEAEA;
       border-bottom: 1px solid #EAEAEA;
     }
 
     .differential-container {
-      max-width: 1100px;
+      max-width: 900px;
       margin: 0 auto;
+      text-align: center;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 3.5rem;
-    }
-
-    .differential-image {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-    }
-
-    .differential-image img {
-      width: 100%;
-      max-width: 450px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      object-fit: cover;
-    }
-
-    .differential-content {
-      flex: 1.2;
+      gap: 2rem;
     }
 
     .differential-quote {
-      font-size: 1.3rem;
-      font-weight: 600;
+      font-size: 1.6rem;
+      font-weight: 700;
       color: var(--primary);
-      line-height: 1.4;
-      margin-bottom: 1rem;
+      line-height: 1.35;
+      max-width: 800px;
     }
 
     .differential-text {
-      color: var(--text-dark);
-      font-size: 1.02rem;
-      line-height: 1.6;
-      margin-bottom: 2rem;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      max-width: 750px;
     }
 
-    .pillars-title {
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 700;
-      color: var(--accent);
-      margin-bottom: 1rem;
+    .differential-image-wrap {
+      margin-top: 1rem;
+      width: 100%;
+      max-width: 550px;
     }
 
-    .pillars-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
+    .differential-image-wrap img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      object-fit: cover;
     }
 
-    .pillar-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 600;
-      color: var(--text-dark);
-      font-size: 0.98rem;
-    }
-
-    .pillar-item::before {
-      content: '✓';
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background-color: var(--secondary);
-      color: var(--white);
-      font-size: 0.75rem;
-      flex-shrink: 0;
-    }
-
-    /* 3. Sección Servicios (Publicos) */
+    /* 3. Sección Servicios */
     .services-section {
-      padding: 4rem 2rem;
+      padding: 4.5rem 2rem;
     }
 
     .container {
@@ -304,10 +264,10 @@
       margin-top: auto;
     }
 
-    /* Sección Contacto */
+    /* 4. Sección Contacto */
     .contact-section {
       background-color: var(--white);
-      padding: 4rem 2rem;
+      padding: 4.5rem 2rem;
       text-align: center;
       border-top: 1px solid #EAEAEA;
     }
@@ -359,7 +319,7 @@
     }
 
     @media (max-width: 868px) {
-      .hero, .differential-container {
+      .hero {
         flex-direction: column;
         text-align: center;
         margin: 1.5rem auto;
@@ -369,9 +329,8 @@
         font-size: 1.8rem;
       }
 
-      .pillars-list {
-        align-items: flex-start;
-        text-align: left;
+      .differential-quote {
+        font-size: 1.35rem;
       }
 
       .contact-buttons {
@@ -413,33 +372,24 @@
       </div>
     </section>
 
-    <!-- 2. PROPUESTA Y DIFERENCIAL (Con foto 2) -->
+    <!-- 2. PROPUESTA Y DIFERENCIAL -->
     <section class="differential-section" id="propuesta">
       <div class="differential-container">
         
-        <div class="differential-image">
-          <!-- AVISO: Asegurate de subir la imagen con el nombre foto2.png -->
-          <img src="foto2.png" alt="Lic. Marianela Exner - Psicopedagogía" onerror="this.src='https://via.placeholder.com/450x500?text=Subir+foto2.png';">
-        </div>
+        <p class="differential-quote">No se trata solamente de elegir una carrera.</p>
+        <p class="differential-text">
+          Se trata de poder preguntarte quién sos, qué querés, qué necesitás y qué posibilidades existen para construir un proyecto que tenga sentido para vos.
+        </p>
 
-        <div class="differential-content">
-          <p class="differential-quote">No se trata solamente de elegir una carrera.</p>
-          <p class="differential-text">
-            Se trata de poder preguntarte quién sos, qué querés, qué necesitás y qué posibilidades existen para construir un proyecto que tenga sentido para vos.
-          </p>
-
-          <p class="pillars-title">Pilares clave de mi abordaje:</p>
-          <div class="pillars-list">
-            <div class="pillar-item">Orientación vocacional y laboral</div>
-            <div class="pillar-item">Acompañamiento en transiciones y cambios</div>
-            <div class="pillar-item">Mirada psicopedagógica en Educación Superior y neurodivergencias</div>
-          </div>
+        <div class="differential-image-wrap">
+          <!-- Si tenés una segunda imagen subida a GitHub, podés cambiar foto2.png por su nombre exacto -->
+          <img src="foto2.png" alt="Lic. Marianela Exner" onerror="this.style.display='none';">
         </div>
 
       </div>
     </section>
 
-    <!-- 3. SERVICIOS Y PÚBLICOS -->
+    <!-- 3. SERVICIOS -->
     <section class="services-section" id="servicios">
       <div class="container">
         <h2 class="section-title">Servicios</h2>
