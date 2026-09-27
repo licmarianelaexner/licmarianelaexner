@@ -3,41 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marianela Exner | Psicopedagogía y Orientación Vocacional</title>
+  
+  <meta name="description" content="Marianela Exner, Lic. en Psicopedagogía y Esp. en Orientación Vocacional, Laboral y Educativa.">
 
-  <title>Marianela Exner | Psicopedagogía y Orientación</title>
-
-  <meta
-    name="description"
-    content="Marianela Exner, Lic. en Psicopedagogía y Esp. en Orientación Vocacional, Laboral y Educativa."
-  >
-
-  <!-- Tipografía Lufga Web (de respaldo) -->
+  <!-- Fuente Montserrat de Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lufga:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-
-    /* Carga de la tipografía local */
-    @font-face {
-      font-family: "LufgaCustom";
-      src: url("LUFGA BOLD . OTF") format("opentype");
-      font-weight: bold;
-      font-style: normal;
-    }
-
-    :root {
-      --verde: #1f6f68;
-      --verde-claro: #dcefeb;
-      --verde-suave: #eef7f5;
-      --arena: #f8f7f3;
-      --texto: #263b39;
-      --blanco: #ffffff;
-    }
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -45,483 +20,146 @@
     }
 
     body {
-      font-family: "LufgaCustom", "Lufga", Arial, sans-serif;
-      color: var(--texto);
-      background: var(--arena);
+      font-family: 'Montserrat', sans-serif;
+      background-color: #ffffff;
+      color: #333333;
       line-height: 1.6;
     }
 
     header {
-      background: var(--blanco);
-      padding: 25px 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #e5e5e5;
+      padding: 1.2rem 8%;
+      background-color: #ffffff;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
-    .logo img {
-      height: 50px;
+    .logo-header img {
+      height: 55px;
       width: auto;
       display: block;
     }
 
     nav a {
-      margin-left: 25px;
+      margin-left: 2rem;
       text-decoration: none;
-      color: var(--texto);
+      color: #4B6B75;
+      font-weight: 500;
       font-size: 0.95rem;
+      transition: color 0.2s;
     }
 
     nav a:hover {
-      color: var(--verde);
+      color: #7FA9B0;
     }
 
     .hero {
-      min-height: 75vh;
       display: flex;
       align-items: center;
-      padding: 80px 8%;
-      background: var(--verde-suave);
+      justify-content: space-between;
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+      gap: 3rem;
     }
 
     .hero-content {
-      max-width: 850px;
+      flex: 1;
     }
 
-    .hero h1 {
-      font-size: clamp(3rem, 7vw, 5.5rem);
-      line-height: 1;
-      color: var(--verde);
-      margin-bottom: 25px;
-      font-weight: 600;
+    .hero-logo-main img {
+      max-width: 100%;
+      width: 380px;
+      height: auto;
+      margin-bottom: 1.5rem;
     }
 
-    .hero h2 {
-      font-size: clamp(1.5rem, 3vw, 2.5rem);
-      font-weight: 400;
-      margin-bottom: 25px;
+    .hero-content p {
+      color: #555555;
+      font-size: 1.05rem;
+      font-weight: 300;
+      margin-bottom: 2rem;
     }
 
-    .hero p {
-      max-width: 700px;
-      font-size: 1.15rem;
-      margin-bottom: 25px;
-    }
-
-    .botones {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
-
-    .boton {
+    .cta-button {
       display: inline-block;
-      padding: 14px 25px;
-      border-radius: 30px;
+      padding: 0.8rem 2rem;
+      background-color: #7FA9B0;
+      color: #ffffff;
       text-decoration: none;
+      border-radius: 30px;
       font-weight: 500;
-      transition: 0.3s ease;
+      transition: background-color 0.3s;
     }
 
-    .boton-principal {
-      background: var(--verde);
-      color: white;
+    .cta-button:hover {
+      background-color: #4B6B75;
     }
 
-    .boton-principal:hover {
-      transform: translateY(-2px);
-      opacity: 0.9;
-    }
-
-    .boton-secundario {
-      border: 1px solid var(--verde);
-      color: var(--verde);
-    }
-
-    .boton-secundario:hover {
-      background: var(--verde);
-      color: white;
-    }
-
-    section {
-      padding: 90px 8%;
-    }
-
-    .titulo-seccion {
-      font-size: 2.5rem;
-      color: var(--verde);
-      margin-bottom: 20px;
-      font-weight: 600;
-    }
-
-    .intro {
-      max-width: 750px;
-      margin-bottom: 50px;
-      font-size: 1.1rem;
-    }
-
-    .servicios {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 25px;
-    }
-
-    .tarjeta {
-      background: white;
-      padding: 30px;
-      border-radius: 18px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-    }
-
-    .tarjeta h3 {
-      color: var(--verde);
-      margin-bottom: 15px;
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
-
-    .sobre-mi {
-      background: var(--verde-claro);
-    }
-
-    .sobre-mi-contenido {
-      max-width: 800px;
-    }
-
-    .contacto {
-      text-align: center;
-      background: var(--verde);
-      color: white;
-    }
-
-    .contacto .titulo-seccion {
-      color: white;
-    }
-
-    .contacto p {
-      max-width: 650px;
-      margin: 0 auto 30px;
-    }
-
-    .boton-blanco {
-      background: white;
-      color: var(--verde);
-    }
-
-    .contacto-links {
-      margin-top: 25px;
+    .hero-image {
+      flex: 1;
       display: flex;
       justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
     }
 
-    .contacto-links a {
-      color: white;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(255,255,255,0.6);
-      padding-bottom: 3px;
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+      max-height: 520px;
+      object-fit: contain;
     }
 
-    footer {
-      padding: 30px 8%;
-      text-align: center;
-      background: #174f4a;
-      color: white;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 700px) {
-
-      header {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      nav {
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column-reverse;
         text-align: center;
       }
 
-      nav a {
-        margin: 0 8px;
+      nav {
+        display: none;
       }
 
-      .hero {
-        min-height: auto;
-        padding: 70px 8%;
+      .hero-logo-main img {
+        margin: 0 auto 1.5rem auto;
       }
-
-      section {
-        padding: 65px 8%;
-      }
-
-      .hero h1 {
-        font-size: 3.2rem;
-      }
-
     }
-
   </style>
 </head>
-
 <body>
 
   <header>
-
-    <div class="logo">
-      <a href="#">
-        <img src="logo.png" alt="Lic. Marianela Exner">
-      </a>
-    </div>
+    <a href="#" class="logo-header">
+      <img src="logo.png" alt="Marianela Exner - Lic. en Psicopedagogía">
+    </a>
 
     <nav>
+      <a href="#inicio">Inicio</a>
       <a href="#sobre-mi">Sobre mí</a>
       <a href="#servicios">Servicios</a>
       <a href="#contacto">Contacto</a>
     </nav>
-
   </header>
 
-
   <main>
-
-    <!-- INICIO -->
-
-    <section class="hero">
-
+    <section class="hero" id="inicio">
       <div class="hero-content">
-
-        <h1>Marianela Exner</h1>
-
-        <h2>
-          Psicopedagogía · Orientación · Neurodiversidad
-        </h2>
-
-        <p>
-          Lic. en Psicopedagogía y Esp. en Orientación Vocacional,
-          Laboral y Educativa.
-        </p>
-
-        <p>
-          Acompaño procesos de elección, transición y construcción
-          de proyectos de vida, desde una mirada integral y respetuosa
-          de la neurodiversidad.
-        </p>
-
-        <div class="botones">
-
-          <a
-            class="boton boton-principal"
-            href="#servicios">
-            Conocé mi propuesta
-          </a>
-
-          <a
-            class="boton boton-secundario"
-            href="https://wa.me/543496465492"
-            target="_blank">
-            Contactarme por WhatsApp
-          </a>
-
+        <div class="hero-logo-main">
+          <img src="logo.png" alt="Marianela Exner - Lic. en Psicopedagogía">
         </div>
 
+        <p>Acompañamiento psicopedagógico integral para niños, adolescentes y jóvenes en sus procesos de aprendizaje y elección vocacional.</p>
+        <a href="#contacto" class="cta-button">Solicitar Consulta</a>
       </div>
 
-    </section>
-
-
-    <!-- SOBRE MÍ -->
-
-    <section id="sobre-mi" class="sobre-mi">
-
-      <div class="sobre-mi-contenido">
-
-        <h2 class="titulo-seccion">
-          Sobre mí
-        </h2>
-
-        <p class="intro">
-          Soy Marianela Exner, Lic. en Psicopedagogía y especialista
-          en Orientación Vocacional, Laboral y Educativa.
-        </p>
-
-        <p>
-          Mi recorrido profesional se construye en el encuentro entre
-          la psicopedagogía, la orientación y el acompañamiento de
-          personas que transitan diferentes momentos de sus trayectorias
-          educativas y profesionales.
-        </p>
-
-        <br>
-
-        <p>
-          Entiendo la orientación como un proceso de construcción:
-          un espacio para detenerse, mirar el recorrido, reconocer
-          posibilidades y comenzar a proyectar nuevos caminos.
-        </p>
-
+      <div class="hero-image">
+        <img src="logo.png" alt="Marianela Exner">
       </div>
-
     </section>
-
-
-    <!-- SERVICIOS -->
-
-    <section id="servicios">
-
-      <h2 class="titulo-seccion">
-        ¿En qué puedo acompañarte?
-      </h2>
-
-      <p class="intro">
-        Diferentes espacios de acompañamiento según el momento
-        de tu trayectoria y aquello que estés necesitando.
-      </p>
-
-
-      <div class="servicios">
-
-        <article class="tarjeta">
-
-          <h3>
-            Orientación vocacional y laboral
-          </h3>
-
-          <p>
-            Procesos individuales para adolescentes, jóvenes y adultos
-            que se encuentran frente a una elección, transición o
-            necesidad de redefinir su camino.
-          </p>
-
-        </article>
-
-
-        <article class="tarjeta">
-
-          <h3>
-            Neurodivergencias y evaluaciones
-          </h3>
-
-          <p>
-            Evaluaciones y acompañamiento psicopedagógico desde una
-            mirada integral y neuroafirmativa.
-          </p>
-
-        </article>
-
-
-        <article class="tarjeta">
-
-          <h3>
-            Asesoría para universitarios
-          </h3>
-
-          <p>
-            Acompañamiento de trayectorias académicas, organización,
-            estrategias de estudio y procesos de adaptación.
-          </p>
-
-        </article>
-
-
-        <article class="tarjeta">
-
-          <h3>
-            Capacitaciones
-          </h3>
-
-          <p>
-            Espacios de formación y capacitación para profesionales,
-            equipos e instituciones.
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- ORIENTACIÓN -->
-
-    <section>
-
-      <h2 class="titulo-seccion">
-        Orientación como construcción
-      </h2>
-
-      <p class="intro">
-        Elegir no es solamente decidir qué estudiar.
-        También implica preguntarnos quiénes somos, qué queremos,
-        qué posibilidades tenemos y qué proyecto queremos construir.
-      </p>
-
-      <p>
-        La orientación puede acompañar diferentes momentos de la vida:
-        una elección educativa, el ingreso a la universidad,
-        una transición laboral, una reorientación o el deseo
-        de encontrar un nuevo sentido al hacer.
-      </p>
-
-    </section>
-
-
-    <!-- CONTACTO -->
-
-    <section class="contacto" id="contacto">
-
-      <h2 class="titulo-seccion">
-        ¿Querés comenzar un proceso?
-      </h2>
-
-      <p>
-        Si querés consultar por orientación, evaluación,
-        asesoría o capacitaciones, podés contactarme.
-      </p>
-
-      <a
-        class="boton boton-blanco"
-        href="https://wa.me/543496465492"
-        target="_blank">
-        Contactarme por WhatsApp
-      </a>
-
-
-      <div class="contacto-links">
-
-        <a
-          href="https://www.instagram.com/lic.marianelaexner/"
-          target="_blank">
-          Instagram
-        </a>
-
-        <a
-          href="https://open.spotify.com/show/033mZ5WBgomsetxJ4fOziD?si=a7c1881919564704"
-          target="_blank">
-          Hacia el Sentido · Spotify
-        </a>
-
-        <a
-          href="mailto:lic.marianelaexner@gmail.com">
-          lic.marianelaexner@gmail.com
-        </a>
-
-      </div>
-
-    </section>
-
   </main>
-
-
-  <!-- PIE DE PÁGINA -->
-
-  <footer>
-
-    © Marianela Exner · Psicopedagogía y Orientación
-
-  </footer>
 
 </body>
 </html>
