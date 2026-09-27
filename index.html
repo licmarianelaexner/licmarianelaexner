@@ -61,7 +61,7 @@
     }
 
     .logo-header img {
-      max-height: 180px; /* Doble de tamaño */
+      max-height: 180px;
       width: auto;
       max-width: 100%;
       object-fit: contain;
@@ -147,7 +147,7 @@
       object-fit: contain;
     }
 
-    /* 2. Sección Diferencial / Propuesta de Valor */
+    /* 2. Sección Diferencial / Propuesta de Valor (Imagen a la Izquierda) */
     .differential-section {
       background-color: var(--white);
       padding: 4.5rem 2rem;
@@ -165,6 +165,28 @@
       gap: 3rem;
     }
 
+    /* Contenedor de la foto a la izquierda */
+    .differential-image-wrap {
+      flex: 0.8;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-width: 280px;
+      position: sticky;
+      top: 100px;
+    }
+
+    .differential-image-wrap img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Contenedor del texto y pilares a la derecha */
     .differential-content {
       flex: 1.2;
       text-align: left;
@@ -211,26 +233,6 @@
       display: flex;
       align-items: center;
       box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-    }
-
-    .differential-image-wrap {
-      flex: 0.8;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-width: 280px;
-      position: sticky;
-      top: 100px;
-    }
-
-    .differential-image-wrap img {
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      object-fit: cover;
-      display: block;
     }
 
     /* 3. Sección Servicios */
@@ -444,10 +446,16 @@
       </div>
     </section>
 
-    <!-- 2. PROPUESTA Y DIFERENCIAL -->
+    <!-- 2. PROPUESTA Y DIFERENCIAL (Foto 2 a la izquierda, Pilares a la derecha) -->
     <section class="differential-section" id="propuesta">
       <div class="differential-container">
         
+        <!-- Foto a la izquierda -->
+        <div class="differential-image-wrap">
+          <img src="foto2.png" alt="Lic. Marianela Exner">
+        </div>
+
+        <!-- Texto y Pilares a la derecha -->
         <div class="differential-content">
           <p class="differential-quote">No se trata solamente de elegir una carrera.</p>
           <p class="differential-text">
@@ -464,10 +472,6 @@
             <div class="pillar-card">Capacitaciones y talleres</div>
             <div class="pillar-card">Espacios de horizontalidad para profesionales y colegas</div>
           </div>
-        </div>
-
-        <div class="differential-image-wrap">
-          <img src="foto2.png" alt="Lic. Marianela Exner">
         </div>
 
       </div>
