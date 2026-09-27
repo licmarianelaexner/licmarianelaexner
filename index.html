@@ -54,11 +54,16 @@
     }
 
     .logo-header {
-      font-weight: 700;
-      color: var(--primary);
-      text-decoration: none;
-      font-size: 1.2rem;
+      display: inline-block;
       text-align: center;
+      text-decoration: none;
+    }
+
+    .logo-header img {
+      max-height: 90px;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
     }
 
     nav {
@@ -140,7 +145,7 @@
       object-fit: contain;
     }
 
-    /* 2. Sección Diferencial / Propuesta de Valor (Lado a Lado) */
+    /* 2. Sección Diferencial / Propuesta de Valor */
     .differential-section {
       background-color: var(--white);
       padding: 4.5rem 2rem;
@@ -187,7 +192,6 @@
       margin-bottom: 1rem;
     }
 
-    /* Grilla de Pilares */
     .pillars-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -404,7 +408,10 @@
 <body>
 
   <header>
-    <a href="#" class="logo-header">Lic. en psicopedagogía Marianela Exner</a>
+    <!-- Logo en formato de imagen Banner -->
+    <a href="#" class="logo-header">
+      <img src="banner.png" alt="Lic. en psicopedagogía Marianela Exner" onerror="this.outerHTML='<span style=\'font-weight:700;color:var(--primary);font-size:1.2rem;\'>Lic. en psicopedagogía Marianela Exner</span>';">
+    </a>
 
     <nav>
       <a href="#inicio">Inicio</a>
