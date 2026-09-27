@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lic. en psicopedagogía Marianela Exner</title>
-  <meta name="description" content="Lic. Marianela Exner - Esp. en orientación vocacional y educativa. Acompañamiento a jóvenes y adultos.">
+  <meta name="description" content="Orientación para elegir, transitar y rediseñar tus proyectos. Lic. Marianela Exner.">
 
   <!-- Fuente Montserrat de Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,6 +26,10 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -75,7 +79,7 @@
       color: var(--secondary);
     }
 
-    /* Sección Principal */
+    /* 1. Portada (Hero) */
     .hero {
       display: flex;
       align-items: center;
@@ -90,43 +94,37 @@
       flex: 1.2;
     }
 
-    .tagline {
-      font-size: 1.15rem;
-      font-weight: 600;
+    .hero-title {
+      font-size: 2.2rem;
+      font-weight: 700;
       color: var(--primary);
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
       margin-bottom: 2rem;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
-    .tagline p {
-      margin-bottom: 0.4rem;
-    }
-
-    /* Lista de ítems de la sección principal */
-    .feature-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.1rem;
-      padding-left: 0.5rem;
-    }
-
-    .feature-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 1.02rem;
-      font-weight: 500;
-      color: var(--text-dark);
-    }
-
-    .feature-item::before {
-      content: '';
+    .btn-cta {
       display: inline-block;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background-color: var(--secondary);
-      flex-shrink: 0;
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 0.9rem 1.8rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background-color 0.2s, transform 0.2s;
+      box-shadow: 0 4px 12px rgba(75, 107, 117, 0.25);
+    }
+
+    .btn-cta:hover {
+      background-color: #38525A;
+      transform: translateY(-2px);
     }
 
     .hero-image {
@@ -138,14 +136,99 @@
     .hero-image img {
       max-width: 100%;
       height: auto;
-      max-height: 520px;
+      max-height: 480px;
       object-fit: contain;
-      background: transparent;
     }
 
-    /* Sección Servicios */
-    .services-section {
+    /* 2. Sección Diferencial / Propuesta de Valor */
+    .differential-section {
       background-color: var(--white);
+      padding: 4rem 2rem;
+      border-top: 1px solid #EAEAEA;
+      border-bottom: 1px solid #EAEAEA;
+    }
+
+    .differential-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 3.5rem;
+    }
+
+    .differential-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .differential-image img {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      object-fit: cover;
+    }
+
+    .differential-content {
+      flex: 1.2;
+    }
+
+    .differential-quote {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--primary);
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+
+    .differential-text {
+      color: var(--text-dark);
+      font-size: 1.02rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .pillars-title {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .pillars-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .pillar-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+      color: var(--text-dark);
+      font-size: 0.98rem;
+    }
+
+    .pillar-item::before {
+      content: '✓';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: var(--secondary);
+      color: var(--white);
+      font-size: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    /* 3. Sección Servicios (Publicos) */
+    .services-section {
       padding: 4rem 2rem;
     }
 
@@ -165,46 +248,48 @@
     .section-subtitle {
       text-align: center;
       color: var(--text-muted);
-      margin-bottom: 2.5rem;
-      font-size: 0.95rem;
+      margin-bottom: 3rem;
+      font-size: 1rem;
     }
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.8rem;
     }
 
     .service-card {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      background-color: var(--bg-light);
-      padding: 2rem 1.5rem;
-      border-radius: 12px;
-      border-left: 4px solid var(--secondary);
+      background-color: var(--white);
+      padding: 2rem 1.6rem;
+      border-radius: 14px;
+      border-top: 4px solid var(--secondary);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.04);
       text-decoration: none;
-      color: var(--primary);
+      color: var(--text-dark);
       transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
     }
 
     .service-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      border-left-color: var(--primary);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      border-top-color: var(--primary);
     }
 
     .service-card h3 {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 700;
-      margin-bottom: 0.6rem;
+      color: var(--primary);
+      margin-bottom: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
 
     .service-card p {
       color: var(--text-muted);
-      font-size: 0.92rem;
+      font-size: 0.93rem;
       line-height: 1.5;
       margin-bottom: 1.5rem;
     }
@@ -215,14 +300,16 @@
       gap: 6px;
       color: var(--accent);
       font-weight: 600;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       margin-top: auto;
     }
 
     /* Sección Contacto */
     .contact-section {
+      background-color: var(--white);
       padding: 4rem 2rem;
       text-align: center;
+      border-top: 1px solid #EAEAEA;
     }
 
     .contact-buttons {
@@ -250,52 +337,39 @@
       transform: translateY(-2px);
     }
 
-    /* Botones de Contacto */
-    .btn-whatsapp { 
-      background-color: var(--primary); 
-    }
-    .btn-whatsapp:hover {
-      background-color: #38525A;
-    }
+    .btn-whatsapp { background-color: var(--primary); }
+    .btn-whatsapp:hover { background-color: #38525A; }
 
-    .btn-email {
-      background-color: #556B72;
-    }
-    .btn-email:hover {
-      background-color: #3E5157;
-    }
+    .btn-email { background-color: #556B72; }
+    .btn-email:hover { background-color: #3E5157; }
 
-    .btn-instagram { 
-      background-color: var(--secondary); 
-    }
-    .btn-instagram:hover {
-      background-color: #628E95;
-    }
+    .btn-instagram { background-color: var(--secondary); }
+    .btn-instagram:hover { background-color: #628E95; }
 
-    .btn-spotify { 
-      background-color: var(--accent); 
-    }
-    .btn-spotify:hover {
-      background-color: #4D818C;
-    }
+    .btn-spotify { background-color: var(--accent); }
+    .btn-spotify:hover { background-color: #4D818C; }
 
     footer {
       text-align: center;
       padding: 2rem;
-      background-color: var(--white);
+      background-color: var(--bg-light);
       color: var(--text-muted);
       font-size: 0.85rem;
       border-top: 1px solid #EAEAEA;
     }
 
-    @media (max-width: 768px) {
-      .hero {
+    @media (max-width: 868px) {
+      .hero, .differential-container {
         flex-direction: column;
         text-align: center;
         margin: 1.5rem auto;
       }
 
-      .feature-list {
+      .hero-title {
+        font-size: 1.8rem;
+      }
+
+      .pillars-list {
         align-items: flex-start;
         text-align: left;
       }
@@ -316,53 +390,63 @@
 
     <nav>
       <a href="#inicio">Inicio</a>
+      <a href="#propuesta">Propuesta</a>
       <a href="#servicios">Servicios</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
   <main>
+
+    <!-- 1. PORTADA / HERO -->
     <section class="hero" id="inicio">
       <div class="hero-content">
-        <div class="tagline">
-          <p>Un espacio para pensar elecciones, transiciones y proyectos de vida.</p>
-          <p>Un espacio para aprender, formarse y compartir el ser y hacer de la psicopedagogía.</p>
-        </div>
-        
-        <div class="feature-list">
-          <div class="feature-item">
-            Acompaño elecciones, transiciones y proyectos de vida.
-          </div>
-          <div class="feature-item">
-            Acompaño trayectorias en educación superior y neurodivergencias.
-          </div>
-          <div class="feature-item">
-            Comparto formación y experiencia en talleres y capacitaciones.
-          </div>
-        </div>
+        <h1 class="hero-title">Orientación para elegir, transitar y rediseñar tus proyectos.</h1>
+        <p class="hero-subtitle">
+          Acompaño adolescentes, jóvenes y adultos en momentos de elección, transición y cambio, con una mirada que contempla las singularidades de cada trayectoria.
+        </p>
+        <a href="#servicios" class="btn-cta">Quiero conocer la propuesta &rarr;</a>
       </div>
 
       <div class="hero-image">
-        <img src="fondo transparente.png" alt="Lic. en psicopedagogía Marianela Exner">
+        <img src="fondo transparente.png" alt="Lic. Marianela Exner">
       </div>
     </section>
 
-    <!-- Sección Servicios -->
+    <!-- 2. PROPUESTA Y DIFERENCIAL (Con foto 2) -->
+    <section class="differential-section" id="propuesta">
+      <div class="differential-container">
+        
+        <div class="differential-image">
+          <!-- AVISO: Asegurate de subir la imagen con el nombre foto2.png -->
+          <img src="foto2.png" alt="Lic. Marianela Exner - Psicopedagogía" onerror="this.src='https://via.placeholder.com/450x500?text=Subir+foto2.png';">
+        </div>
+
+        <div class="differential-content">
+          <p class="differential-quote">No se trata solamente de elegir una carrera.</p>
+          <p class="differential-text">
+            Se trata de poder preguntarte quién sos, qué querés, qué necesitás y qué posibilidades existen para construir un proyecto que tenga sentido para vos.
+          </p>
+
+          <p class="pillars-title">Pilares clave de mi abordaje:</p>
+          <div class="pillars-list">
+            <div class="pillar-item">Orientación vocacional y laboral</div>
+            <div class="pillar-item">Acompañamiento en transiciones y cambios</div>
+            <div class="pillar-item">Mirada psicopedagógica en Educación Superior y neurodivergencias</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. SERVICIOS Y PÚBLICOS -->
     <section class="services-section" id="servicios">
       <div class="container">
         <h2 class="section-title">Servicios</h2>
-        <p class="section-subtitle">Hacé clic en el servicio sobre el que quieras consultar:</p>
+        <p class="section-subtitle">Elegí la opción que mejor se adapte a tu momento actual:</p>
 
         <div class="services-grid">
           
-          <a href="https://wa.me/543496465492?text=Hola%20Marianela,%20quisiera%20pedir%20información%20y%20temáticas%20sobre%20Capacitaciones." target="_blank" rel="noopener" class="service-card">
-            <div>
-              <h3>Capacitaciones</h3>
-              <p>Espacios de formación y aprendizaje. Pedí información sobre las próximas fechas.</p>
-            </div>
-            <span class="btn-turn">Consultar por WhatsApp &rarr;</span>
-          </a>
-
           <a href="https://wa.me/543496465492?text=Hola%20Marianela,%20quisiera%20pedir%20turno/información%20sobre%20Orientación%20Vocacional%20y%20Laboral." target="_blank" rel="noopener" class="service-card">
             <div>
               <h3>Orientación Vocacional y Laboral</h3>
@@ -382,16 +466,24 @@
           <a href="https://wa.me/543496465492?text=Hola%20Marianela,%20quisiera%20pedir%20turno/información%20sobre%20Asesorías%20a%20Profesionales." target="_blank" rel="noopener" class="service-card">
             <div>
               <h3>Asesorías a Profesionales</h3>
-              <p>Un espacio de horizontalidad para pensar casos, prácticas y tu propia trayectoria profesional.</p>
+              <p>Psicopedagogos/as y profesionales de la salud/educación que buscan un espacio horizontal para pensar casos, prácticas y su propio recorrido profesional.</p>
             </div>
             <span class="btn-turn">Pedir turno por WhatsApp &rarr;</span>
+          </a>
+
+          <a href="https://wa.me/543496465492?text=Hola%20Marianela,%20quisiera%20pedir%20información%20y%20temáticas%20sobre%20Capacitaciones." target="_blank" rel="noopener" class="service-card">
+            <div>
+              <h3>Capacitaciones</h3>
+              <p>Espacios de formación y aprendizaje (abordaje de neurodivergencias, psicopedagogía, formaciones y talleres). Pedí información sobre las próximas fechas.</p>
+            </div>
+            <span class="btn-turn">Consultar por WhatsApp &rarr;</span>
           </a>
 
         </div>
       </div>
     </section>
 
-    <!-- Sección Contacto -->
+    <!-- 4. CONTACTO -->
     <section class="contact-section" id="contacto">
       <div class="container">
         <h2 class="section-title">Contacto</h2>
@@ -416,6 +508,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer>
