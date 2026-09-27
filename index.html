@@ -91,7 +91,7 @@
     }
 
     .tagline {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 600;
       color: var(--primary);
       margin-bottom: 1.2rem;
@@ -103,6 +103,10 @@
       font-size: 1.05rem;
       font-weight: 400;
       margin-bottom: 2rem;
+    }
+
+    .description p {
+      margin-bottom: 0.6rem;
     }
 
     .hero-image {
@@ -217,12 +221,19 @@
       transform: translateY(-2px);
     }
 
-    /* Botones alineados con la paleta del logo */
+    /* Botones de Contacto */
     .btn-whatsapp { 
       background-color: var(--primary); 
     }
     .btn-whatsapp:hover {
       background-color: #38525A;
+    }
+
+    .btn-email {
+      background-color: #556B72;
+    }
+    .btn-email:hover {
+      background-color: #3E5157;
     }
 
     .btn-instagram { 
@@ -237,13 +248,6 @@
     }
     .btn-spotify:hover {
       background-color: #4D818C;
-    }
-
-    .btn-email {
-      background-color: #556B72;
-    }
-    .btn-email:hover {
-      background-color: #3E5157;
     }
 
     footer {
@@ -286,14 +290,16 @@
   <main>
     <section class="hero" id="inicio">
       <div class="hero-content">
-        <p class="tagline">
-          Un espacio para pensar elecciones, transiciones y proyectos de vida.<br>
-          Un espacio para aprender, formarse y compartir el ser y hacer de la psicopedagogía.
-        </p>
+        <div class="tagline">
+          <p>Un espacio para pensar elecciones, transiciones y proyectos de vida.</p>
+          <p>Un espacio para aprender, formarse y compartir el ser y hacer de la psicopedagogía.</p>
+        </div>
         
-        <p class="description">
-          Acompaño a jóvenes y adultos en educación superior, orientación vocacional y laboral, y procesos vinculados a la neurodivergencia. Capacitaciones a profesionales.
-        </p>
+        <div class="description">
+          <p>Acompaño a jóvenes y adultos en sus procesos de elección, transición y construcción de proyectos de vida.</p>
+          <p>Acompaño trayectorias en educación superior y procesos vinculados a la neurodivergencia.</p>
+          <p>Comparto mi formación y experiencia a través de talleres, capacitaciones y espacios de aprendizaje para profesionales.</p>
+        </div>
       </div>
 
       <div class="hero-image">
