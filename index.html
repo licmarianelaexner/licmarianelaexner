@@ -155,7 +155,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 2rem;
+      gap: 1.8rem;
     }
 
     .differential-quote {
@@ -173,8 +173,40 @@
       max-width: 750px;
     }
 
-    .differential-image-wrap {
+    .pillars-title {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      color: var(--primary);
       margin-top: 1rem;
+    }
+
+    /* Grilla de Pilares claves */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
+      width: 100%;
+      max-width: 850px;
+    }
+
+    .pillar-card {
+      background-color: var(--bg-light);
+      border-left: 4px solid var(--secondary);
+      padding: 1.1rem 1.3rem;
+      border-radius: 8px;
+      text-align: left;
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+
+    .differential-image-wrap {
+      margin-top: 1.5rem;
       width: 100%;
       max-width: 550px;
     }
@@ -333,6 +365,10 @@
         font-size: 1.35rem;
       }
 
+      .pillars-grid {
+        grid-template-columns: 1fr;
+      }
+
       .contact-buttons {
         flex-direction: column;
         align-items: stretch;
@@ -372,7 +408,7 @@
       </div>
     </section>
 
-    <!-- 2. PROPUESTA Y DIFERENCIAL -->
+    <!-- 2. PROPUESTA Y DIFERENCIAL (Con Pilares) -->
     <section class="differential-section" id="propuesta">
       <div class="differential-container">
         
@@ -381,8 +417,18 @@
           Se trata de poder preguntarte quién sos, qué querés, qué necesitás y qué posibilidades existen para construir un proyecto que tenga sentido para vos.
         </p>
 
+        <p class="pillars-title">Pilares claves de mi propuesta:</p>
+        
+        <div class="pillars-grid">
+          <div class="pillar-card">Orientación vocacional</div>
+          <div class="pillar-card">Rediseño profesional y laboral</div>
+          <div class="pillar-card">Acompañamiento a estudiantes de educación superior</div>
+          <div class="pillar-card">Abordaje en neurodivergencias</div>
+          <div class="pillar-card">Capacitaciones y talleres</div>
+          <div class="pillar-card">Espacios de horizontalidad para profesionales y colegas</div>
+        </div>
+
         <div class="differential-image-wrap">
-          <!-- Si tenés una segunda imagen subida a GitHub, podés cambiar foto2.png por su nombre exacto -->
           <img src="foto2.png" alt="Lic. Marianela Exner" onerror="this.style.display='none';">
         </div>
 
