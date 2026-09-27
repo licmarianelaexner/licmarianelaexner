@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marianela Exner | Lic. en Psicopedagogía</title>
-  
   <meta name="description" content="Lic. Marianela Exner - Esp. en orientación vocacional y educativa. Acompañamiento a jóvenes y adultos.">
 
   <!-- Fuente Montserrat de Google Fonts -->
@@ -50,10 +49,11 @@
       z-index: 100;
     }
 
-    .logo-header img {
-      height: 50px;
-      width: auto;
-      display: block;
+    .logo-header {
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 1.2rem;
     }
 
     nav a {
@@ -69,7 +69,7 @@
       color: var(--secondary);
     }
 
-    /* Sección Principal (Hero) */
+    /* Sección Principal */
     .hero {
       display: flex;
       align-items: center;
@@ -84,24 +84,17 @@
       flex: 1.2;
     }
 
-    .hero-logo-main img {
-      max-width: 100%;
-      width: 360px;
-      height: auto;
-      margin-bottom: 1.5rem;
-    }
-
     .tagline {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       font-weight: 600;
       color: var(--primary);
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
       line-height: 1.4;
     }
 
     .description {
       color: var(--text-muted);
-      font-size: 1rem;
+      font-size: 1.05rem;
       font-weight: 400;
       margin-bottom: 2rem;
     }
@@ -115,7 +108,7 @@
     .hero-image img {
       max-width: 100%;
       height: auto;
-      max-height: 500px;
+      max-height: 520px;
       object-fit: contain;
     }
 
@@ -151,7 +144,6 @@
       gap: 1.5rem;
     }
 
-    /* Tarjetas de Servicio interactiva hacia WhatsApp */
     .service-card {
       display: flex;
       flex-direction: column;
@@ -219,19 +211,10 @@
       transform: translateY(-2px);
     }
 
-    .btn-whatsapp {
-      background-color: var(--whatsapp);
-    }
+    .btn-whatsapp { background-color: var(--whatsapp); }
+    .btn-instagram { background-color: #E1306C; }
+    .btn-spotify { background-color: #1DB954; }
 
-    .btn-instagram {
-      background-color: #E1306C;
-    }
-
-    .btn-spotify {
-      background-color: #1DB954;
-    }
-
-    /* Footer */
     footer {
       text-align: center;
       padding: 2rem;
@@ -241,7 +224,6 @@
       border-top: 1px solid #EAEAEA;
     }
 
-    /* Adaptabilidad Mobile */
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -253,13 +235,9 @@
       }
 
       .hero {
-        flex-direction: column-reverse;
+        flex-direction: column;
         text-align: center;
         margin: 1.5rem auto;
-      }
-
-      .hero-logo-main img {
-        margin: 0 auto 1.5rem auto;
       }
 
       .contact-buttons {
@@ -274,9 +252,7 @@
 <body>
 
   <header>
-    <a href="#" class="logo-header">
-      <img src="logo.png" alt="Marianela Exner Logo">
-    </a>
+    <a href="#" class="logo-header">Marianela Exner</a>
 
     <nav>
       <a href="#inicio">Inicio</a>
@@ -286,13 +262,8 @@
   </header>
 
   <main>
-    <!-- Presentación Principal -->
     <section class="hero" id="inicio">
       <div class="hero-content">
-        <div class="hero-logo-main">
-          <img src="logo.png" alt="Marianela Exner - Lic. en Psicopedagogía">
-        </div>
-
         <p class="tagline">Un espacio para pensar elecciones, transiciones y proyectos de vida.</p>
         
         <p class="description">
@@ -301,7 +272,8 @@
       </div>
 
       <div class="hero-image">
-        <img src="foto.png" alt="Marianela Exner">
+        <!-- Usa la imagen 'fotoo.jpg' subida al repositorio -->
+        <img src="fotoo.jpg" alt="Marianela Exner - Lic. en Psicopedagogía">
       </div>
     </section>
 
@@ -310,27 +282,23 @@
       <div class="container">
         <h2 class="section-title">Servicios</h2>
         <p class="section-subtitle">Hacé clic en el servicio sobre el que quieras consultar o pedir turno:</p>
-        
+
         <div class="services-grid">
-          <!-- Servicio 1 -->
           <a href="https://wa.me/543496465492?text=Hola%20Marianela,%20quisiera%20pedir%20turno/información%20sobre%20Capacitaciones." target="_blank" rel="noopener" class="service-card">
             <h3>Capacitaciones</h3>
             <span class="btn-turn">Pedir turno por WhatsApp &rarr;</span>
           </a>
 
-          <!-- Servicio 2 -->
           <a href="https://wa.me/543496465492?text=Hola%20Marianela,%20quisiera%20pedir%20turno/información%20sobre%20Orientación%20vocacional/laboral." target="_blank" rel="noopener" class="service-card">
             <h3>Orientación vocacional / laboral</h3>
             <span class="btn-turn">Pedir turno por WhatsApp &rarr;</span>
           </a>
 
-          <!-- Servicio 3 -->
           <a href="https://wa.me/543496465492?text=Hola%20Marianela,%20quisiera%20pedir%20turno/información%20sobre%20Asesorías%20a%20profesionales/supervisiones." target="_blank" rel="noopener" class="service-card">
             <h3>Asesorías a profesionales / supervisiones</h3>
             <span class="btn-turn">Pedir turno por WhatsApp &rarr;</span>
           </a>
 
-          <!-- Servicio 4 -->
           <a href="https://wa.me/543496465492?text=Hola%20Marianela,%20quisiera%20pedir%20turno/información%20sobre%20Asesorías%20a%20estudiantes%20de%20nivel%20superior." target="_blank" rel="noopener" class="service-card">
             <h3>Asesorías a estudiantes de nivel superior</h3>
             <span class="btn-turn">Pedir turno por WhatsApp &rarr;</span>
@@ -339,7 +307,7 @@
       </div>
     </section>
 
-    <!-- Sección Contacto y Redes -->
+    <!-- Sección Contacto -->
     <section class="contact-section" id="contacto">
       <div class="container">
         <h2 class="section-title">Contacto</h2>
