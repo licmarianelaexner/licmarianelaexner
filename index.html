@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marianela Exner | Lic. en Psicopedagogía</title>
+  <title>Lic. en psicopedagogía Marianela Exner</title>
   <meta name="description" content="Lic. Marianela Exner - Esp. en orientación vocacional y educativa. Acompañamiento a jóvenes y adultos.">
 
   <!-- Fuente Montserrat de Google Fonts -->
@@ -13,14 +13,13 @@
 
   <style>
     :root {
-      --primary: #4B6B75;
-      --secondary: #7FA9B0;
-      --accent: #679CA8;
-      --bg-light: #F7FAFA;
+      --primary: #4B6B75;      /* Azul grisáceo principal */
+      --secondary: #7FA9B0;    /* Verde agua secundario */
+      --accent: #679CA8;       /* Azul acento */
+      --bg-light: #F7FAFA;     /* Fondo suave */
       --text-dark: #2C3E45;
       --text-muted: #556B72;
       --white: #FFFFFF;
-      --whatsapp: #25D366;
     }
 
     * {
@@ -53,7 +52,7 @@
       font-weight: 700;
       color: var(--primary);
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
 
     nav a {
@@ -160,7 +159,7 @@
     .service-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      border-left-color: var(--whatsapp);
+      border-left-color: var(--primary);
     }
 
     .service-card h3 {
@@ -173,7 +172,7 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      color: var(--whatsapp);
+      color: var(--accent);
       font-weight: 600;
       font-size: 0.85rem;
       margin-top: auto;
@@ -202,18 +201,35 @@
       text-decoration: none;
       font-weight: 600;
       font-size: 0.95rem;
-      transition: opacity 0.2s, transform 0.2s;
+      transition: background-color 0.2s, transform 0.2s;
       color: var(--white);
     }
 
     .btn:hover {
-      opacity: 0.9;
       transform: translateY(-2px);
     }
 
-    .btn-whatsapp { background-color: var(--whatsapp); }
-    .btn-instagram { background-color: #E1306C; }
-    .btn-spotify { background-color: #1DB954; }
+    /* Colores basados estrictamente en la paleta del logo */
+    .btn-whatsapp { 
+      background-color: var(--primary); 
+    }
+    .btn-whatsapp:hover {
+      background-color: #38525A;
+    }
+
+    .btn-instagram { 
+      background-color: var(--secondary); 
+    }
+    .btn-instagram:hover {
+      background-color: #628E95;
+    }
+
+    .btn-spotify { 
+      background-color: var(--accent); 
+    }
+    .btn-spotify:hover {
+      background-color: #4D818C;
+    }
 
     footer {
       text-align: center;
@@ -252,7 +268,7 @@
 <body>
 
   <header>
-    <a href="#" class="logo-header">Marianela Exner</a>
+    <a href="#" class="logo-header">Lic. en psicopedagogía Marianela Exner</a>
 
     <nav>
       <a href="#inicio">Inicio</a>
@@ -272,8 +288,7 @@
       </div>
 
       <div class="hero-image">
-        <!-- Usa la imagen 'fotoo.jpg' subida al repositorio -->
-        <img src="fotoo.jpg" alt="Marianela Exner - Lic. en Psicopedagogía">
+        <img src="fotoo.jpg" alt="Lic. en psicopedagogía Marianela Exner">
       </div>
     </section>
 
@@ -307,7 +322,7 @@
       </div>
     </section>
 
-    <!-- Sección Contacto -->
+    <!-- Sección Contacto con colores de la paleta del logo -->
     <section class="contact-section" id="contacto">
       <div class="container">
         <h2 class="section-title">Contacto</h2>
