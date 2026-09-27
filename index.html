@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,6 +10,14 @@
   <meta
     name="description"
     content="Marianela Exner, Lic. en Psicopedagogía y Esp. en Orientación Vocacional, Laboral y Educativa."
+  >
+
+  <!-- Tipografía Lufga -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lufga:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
   >
 
   <style>
@@ -29,7 +38,7 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Lufga", Arial, sans-serif;
       color: var(--texto);
       background: var(--arena);
       line-height: 1.6;
@@ -46,7 +55,7 @@
 
     .logo {
       font-size: 1.4rem;
-      font-weight: bold;
+      font-weight: 600;
       color: var(--verde);
     }
 
@@ -78,24 +87,26 @@
       line-height: 1;
       color: var(--verde);
       margin-bottom: 25px;
+      font-weight: 600;
     }
 
     .hero h2 {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
-      font-weight: normal;
+      font-weight: 400;
       margin-bottom: 25px;
     }
 
     .hero p {
       max-width: 700px;
       font-size: 1.15rem;
-      margin-bottom: 35px;
+      margin-bottom: 25px;
     }
 
     .botones {
       display: flex;
       gap: 15px;
       flex-wrap: wrap;
+      margin-top: 30px;
     }
 
     .boton {
@@ -103,7 +114,8 @@
       padding: 14px 25px;
       border-radius: 30px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
+      transition: 0.3s ease;
     }
 
     .boton-principal {
@@ -111,9 +123,19 @@
       color: white;
     }
 
+    .boton-principal:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
     .boton-secundario {
       border: 1px solid var(--verde);
       color: var(--verde);
+    }
+
+    .boton-secundario:hover {
+      background: var(--verde);
+      color: white;
     }
 
     section {
@@ -124,6 +146,7 @@
       font-size: 2.5rem;
       color: var(--verde);
       margin-bottom: 20px;
+      font-weight: 600;
     }
 
     .intro {
@@ -149,6 +172,7 @@
       color: var(--verde);
       margin-bottom: 15px;
       font-size: 1.3rem;
+      font-weight: 600;
     }
 
     .sobre-mi {
@@ -179,6 +203,21 @@
       color: var(--verde);
     }
 
+    .contacto-links {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .contacto-links a {
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.6);
+      padding-bottom: 3px;
+    }
+
     footer {
       padding: 30px 8%;
       text-align: center;
@@ -194,6 +233,10 @@
         gap: 15px;
       }
 
+      nav {
+        text-align: center;
+      }
+
       nav a {
         margin: 0 8px;
       }
@@ -205,6 +248,10 @@
 
       section {
         padding: 65px 8%;
+      }
+
+      .hero h1 {
+        font-size: 3.2rem;
       }
 
     }
@@ -231,6 +278,8 @@
 
   <main>
 
+    <!-- INICIO -->
+
     <section class="hero">
 
       <div class="hero-content">
@@ -254,12 +303,17 @@
 
         <div class="botones">
 
-          <a class="boton boton-principal" href="#servicios">
+          <a
+            class="boton boton-principal"
+            href="#servicios">
             Conocé mi propuesta
           </a>
 
-          <a class="boton boton-secundario" href="#contacto">
-            Solicitar turno
+          <a
+            class="boton boton-secundario"
+            href="https://wa.me/543496465492"
+            target="_blank">
+            Contactarme por WhatsApp
           </a>
 
         </div>
@@ -268,6 +322,8 @@
 
     </section>
 
+
+    <!-- SOBRE MÍ -->
 
     <section id="sobre-mi" class="sobre-mi">
 
@@ -301,6 +357,8 @@
 
     </section>
 
+
+    <!-- SERVICIOS -->
 
     <section id="servicios">
 
@@ -377,6 +435,8 @@
     </section>
 
 
+    <!-- ORIENTACIÓN -->
+
     <section>
 
       <h2 class="titulo-seccion">
@@ -399,6 +459,8 @@
     </section>
 
 
+    <!-- CONTACTO -->
+
     <section class="contacto" id="contacto">
 
       <h2 class="titulo-seccion">
@@ -410,14 +472,41 @@
         asesoría o capacitaciones, podés contactarme.
       </p>
 
-      <a class="boton boton-blanco" href="mailto:contacto@ejemplo.com">
-        Contactarme
+      <a
+        class="boton boton-blanco"
+        href="https://wa.me/543496465492"
+        target="_blank">
+        Contactarme por WhatsApp
       </a>
+
+
+      <div class="contacto-links">
+
+        <a
+          href="https://www.instagram.com/lic.marianelaexner/"
+          target="_blank">
+          Instagram
+        </a>
+
+        <a
+          href="https://open.spotify.com/show/033mZ5WBgomsetxJ4fOziD?si=a7c1881919564704"
+          target="_blank">
+          Hacia el Sentido · Spotify
+        </a>
+
+        <a
+          href="mailto:lic.marianelaexner@gmail.com">
+          lic.marianelaexner@gmail.com
+        </a>
+
+      </div>
 
     </section>
 
   </main>
 
+
+  <!-- PIE DE PÁGINA -->
 
   <footer>
 
@@ -427,3 +516,4 @@
 
 </body>
 </html>
+```
