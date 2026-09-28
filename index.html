@@ -3,27 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lic. en psicopedagogía Marianela Exner</title>
-  <meta name="description" content="Orientación para elegir, transitar y rediseñar tus proyectos. Lic. Marianela Exner.">
 
-  <!-- Fuente Montserrat de Google Fonts -->
+  <title>Lic. en Psicopedagogía Marianela Exner</title>
+
+  <meta
+    name="description"
+    content="Orientación para elegir, transitar y rediseñar tus proyectos. Lic. Marianela Exner."
+  >
+
+  <!-- Fuente Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
-  <!-- Font Awesome para los Íconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  >
 
   <style>
+
+    /* =========================
+       COLORES
+    ========================= */
+
     :root {
-      --primary: #516F7D;       /* Azul petróleo / Gris azulado oscuro del logo */
-      --secondary: #A2B7B8;     /* Verde agua / Gris verdoso claro del logo */
-      --accent: #B9A3C7;        /* Lila / Violeta suave del corazón del logo */
-      --bg-light: #F4F7F8;      /* Fondo suave complementario */
+      --primary: #516F7D;
+      --secondary: #A2B7B8;
+      --accent: #B9A3C7;
+
+      --bg-light: #F4F7F8;
       --text-dark: #2A363B;
       --text-muted: #516F7D;
       --white: #FFFFFF;
     }
+
+
+    /* =========================
+       GENERAL
+    ========================= */
 
     * {
       box-sizing: border-box;
@@ -42,7 +67,11 @@
       line-height: 1.6;
     }
 
-    /* Ícono del logo para ítems y tarjetas */
+
+    /* =========================
+       LOGO PEQUEÑO
+    ========================= */
+
     .item-icon-logo {
       width: 22px;
       height: 22px;
@@ -52,14 +81,18 @@
       flex-shrink: 0;
     }
 
-    /* Navegación centrada con Banner ampliado */
+
+    /* =========================
+       HEADER
+    ========================= */
+
     header {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 1.5rem 5%;
       background-color: var(--white);
-      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -85,6 +118,7 @@
       display: flex;
       justify-content: center;
       gap: 1.8rem;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -99,7 +133,11 @@
       color: var(--accent);
     }
 
-    /* 1. Portada (Hero) */
+
+    /* =========================
+       HERO
+    ========================= */
+
     .hero {
       display: flex;
       align-items: center;
@@ -160,7 +198,11 @@
       object-fit: contain;
     }
 
-    /* 2. Sección Diferencial / Propuesta de Valor */
+
+    /* =========================
+       PROPUESTA
+    ========================= */
+
     .differential-section {
       background-color: var(--white);
       padding: 4.5rem 2rem;
@@ -193,7 +235,7 @@
       max-width: 400px;
       height: auto;
       border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
       object-fit: cover;
       display: block;
     }
@@ -243,10 +285,14 @@
       color: var(--text-dark);
       display: flex;
       align-items: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
     }
 
-    /* 3. Sección Servicios */
+
+    /* =========================
+       SERVICIOS
+    ========================= */
+
     .services-section {
       padding: 4.5rem 2rem;
     }
@@ -285,7 +331,7 @@
       padding: 2rem 1.6rem;
       border-radius: 14px;
       border-top: 4px solid var(--secondary);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
       text-decoration: none;
       color: var(--text-dark);
       transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
@@ -293,7 +339,7 @@
 
     .service-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
       border-top-color: var(--accent);
     }
 
@@ -325,7 +371,11 @@
       margin-top: auto;
     }
 
-    /* 4. Sección Novedades / Workshops */
+
+    /* =========================
+       NOVEDADES
+    ========================= */
+
     .news-section {
       background-color: var(--white);
       padding: 4.5rem 2rem;
@@ -345,7 +395,7 @@
       padding: 2rem;
       border-radius: 16px;
       border-left: 5px solid var(--accent);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -410,7 +460,11 @@
       color: var(--accent);
     }
 
-    /* 5. Sección Contacto */
+
+    /* =========================
+       CONTACTO
+    ========================= */
+
     .contact-section {
       background-color: var(--bg-light);
       padding: 4.5rem 2rem;
@@ -446,17 +500,42 @@
       transform: translateY(-2px);
     }
 
-    .btn-whatsapp { background-color: var(--primary); }
-    .btn-whatsapp:hover { background-color: #3E5763; }
+    .btn-whatsapp {
+      background-color: var(--primary);
+    }
 
-    .btn-email { background-color: var(--secondary); }
-    .btn-email:hover { background-color: #8CA3A4; }
+    .btn-whatsapp:hover {
+      background-color: #3E5763;
+    }
 
-    .btn-instagram { background-color: var(--accent); }
-    .btn-instagram:hover { background-color: #A38CB3; }
+    .btn-email {
+      background-color: var(--secondary);
+    }
 
-    .btn-spotify { background-color: var(--primary); }
-    .btn-spotify:hover { background-color: #3E5763; }
+    .btn-email:hover {
+      background-color: #8CA3A4;
+    }
+
+    .btn-instagram {
+      background-color: var(--accent);
+    }
+
+    .btn-instagram:hover {
+      background-color: #A38CB3;
+    }
+
+    .btn-spotify {
+      background-color: var(--primary);
+    }
+
+    .btn-spotify:hover {
+      background-color: #3E5763;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       text-align: center;
@@ -467,15 +546,37 @@
       border-top: 1px solid #EAEAEA;
     }
 
+
+    /* =========================
+       CELULAR
+    ========================= */
+
     @media (max-width: 820px) {
+
+      header {
+        padding: 1rem 5%;
+      }
+
       .logo-header img {
         max-height: 120px;
+      }
+
+      nav {
+        gap: 1rem;
+      }
+
+      nav a {
+        font-size: 0.85rem;
       }
 
       .hero {
         flex-direction: column;
         text-align: center;
         margin: 1.5rem auto;
+      }
+
+      .hero-title {
+        font-size: 1.8rem;
       }
 
       .differential-container {
@@ -485,10 +586,6 @@
 
       .differential-content {
         text-align: center;
-      }
-
-      .hero-title {
-        font-size: 1.8rem;
       }
 
       .differential-quote {
@@ -512,14 +609,27 @@
         margin: 2rem auto 0 auto;
       }
     }
+
   </style>
 </head>
+
+
 <body>
 
+  <!-- =========================
+       HEADER
+  ========================= -->
+
   <header>
-    <!-- Logo en formato Banner -->
+
     <a href="#" class="logo-header">
-      <img src="banner.png" alt="Lic. en psicopedagogía Marianela Exner" onerror="this.outerHTML='<span style=\'font-weight:700;color:var(--primary);font-size:1.5rem;\'>Lic. en psicopedagogía Marianela Exner</span>';">
+
+      <img
+        src="banner.png"
+        alt="Lic. en Psicopedagogía Marianela Exner"
+        onerror="this.outerHTML='<span style=\'font-weight:700;color:var(--primary);font-size:1.5rem;\'>Lic. en Psicopedagogía Marianela Exner</span>';"
+      >
+
     </a>
 
     <nav>
@@ -529,179 +639,557 @@
       <a href="#novedades">Novedades</a>
       <a href="#contacto">Contacto</a>
     </nav>
+
   </header>
+
 
   <main>
 
-    <!-- 1. PORTADA / HERO -->
+    <!-- =========================
+         1. PORTADA
+    ========================= -->
+
     <section class="hero" id="inicio">
+
       <div class="hero-content">
-        <h1 class="hero-title">Orientación para elegir, transitar y rediseñar tus proyectos.</h1>
+
+        <h1 class="hero-title">
+          Orientación para elegir, transitar y rediseñar tus proyectos.
+        </h1>
+
         <p class="hero-subtitle">
-          Acompaño adolescentes, jóvenes y adultos en momentos de elección, transición y cambio, con una mirada que contempla las singularidades de cada trayectoria.
+          Acompaño adolescentes, jóvenes y adultos en momentos de elección,
+          transición y cambio, con una mirada que contempla las singularidades
+          de cada trayectoria.
         </p>
-        <a href="#servicios" class="btn-cta">Quiero conocer la propuesta &rarr;</a>
+
+        <a href="#servicios" class="btn-cta">
+          Quiero conocer la propuesta →
+        </a>
+
       </div>
+
 
       <div class="hero-image">
-        <img src="fondo transparente.png" alt="Lic. Marianela Exner">
+
+        <img
+          src="fondo transparente.png"
+          alt="Lic. Marianela Exner"
+        >
+
       </div>
+
     </section>
 
-    <!-- 2. PROPUESTA Y DIFERENCIAL -->
+
+    <!-- =========================
+         2. PROPUESTA
+    ========================= -->
+
     <section class="differential-section" id="propuesta">
+
       <div class="differential-container">
-        
-        <!-- Foto a la izquierda -->
+
         <div class="differential-image-wrap">
-          <img src="foto2.png" alt="Lic. Marianela Exner">
+
+          <img
+            src="foto2.png"
+            alt="Lic. Marianela Exner"
+          >
+
         </div>
 
-        <!-- Texto y Pilares a la derecha -->
+
         <div class="differential-content">
-          <p class="differential-quote">No se trata solamente de elegir una carrera.</p>
-          <p class="differential-text">
-            Se trata de poder preguntarte quién sos, qué querés, qué necesitás y qué posibilidades existen para construir un proyecto que tenga sentido para vos.
+
+          <p class="differential-quote">
+            No se trata solamente de elegir una carrera.
           </p>
 
-          <p class="pillars-title">Pilares claves de mi propuesta:</p>
-          
+          <p class="differential-text">
+            Se trata de poder preguntarte quién sos, qué querés, qué necesitás
+            y qué posibilidades existen para construir un proyecto que tenga
+            sentido para vos.
+          </p>
+
+
+          <p class="pillars-title">
+            Pilares claves de mi propuesta:
+          </p>
+
+
           <div class="pillars-grid">
+
             <div class="pillar-card">
-              <img src="nuevo logo.png" alt="" class="item-icon-logo"> Orientación vocacional
+              <img
+                src="NUEVOLOGO.png"
+                alt=""
+                class="item-icon-logo"
+              >
+              Orientación vocacional
             </div>
+
+
             <div class="pillar-card">
-              <img src="nuevo logo.png" alt="" class="item-icon-logo"> Rediseño profesional y laboral
+              <img
+                src="NUEVOLOGO.png"
+                alt=""
+                class="item-icon-logo"
+              >
+              Rediseño profesional y laboral
             </div>
+
+
             <div class="pillar-card">
-              <img src="nuevo logo.png" alt="" class="item-icon-logo"> Acompañamiento a estudiantes de educación superior
+              <img
+                src="NUEVOLOGO.png"
+                alt=""
+                class="item-icon-logo"
+              >
+              Acompañamiento a estudiantes de educación superior
             </div>
+
+
             <div class="pillar-card">
-              <img src="nuevo logo.png" alt="" class="item-icon-logo"> Abordaje en neurodivergencias
+              <img
+                src="NUEVOLOGO.png"
+                alt=""
+                class="item-icon-logo"
+              >
+              Abordaje en neurodivergencias
             </div>
+
+
             <div class="pillar-card">
-              <img src="nuevo logo.png" alt="" class="item-icon-logo"> Capacitaciones y talleres
+              <img
+                src="NUEVOLOGO.png"
+                alt=""
+                class="item-icon-logo"
+              >
+              Capacitaciones y talleres
             </div>
+
+
             <div class="pillar-card">
-              <img src="nuevo logo.png" alt="" class="item-icon-logo"> Espacios de horizontalidad para profesionales y colegas
+              <img
+                src="NUEVOLOGO.png"
+                alt=""
+                class="item-icon-logo"
+              >
+              Espacios de horizontalidad para profesionales y colegas
             </div>
+
           </div>
+
         </div>
 
       </div>
+
     </section>
 
-    <!-- 3. SERVICIOS -->
+
+    <!-- =========================
+         3. SERVICIOS
+    ========================= -->
+
     <section class="services-section" id="servicios">
+
       <div class="container">
-        <h2 class="section-title">Servicios</h2>
-        <p class="section-subtitle">Elegí la opción que mejor se adapte a tu momento actual:</p>
+
+        <h2 class="section-title">
+          Servicios
+        </h2>
+
+        <p class="section-subtitle">
+          Elegí la opción que mejor se adapte a tu momento actual:
+        </p>
+
 
         <div class="services-grid">
-          
-          <a href="https://wa.me/543496465492?text=Hola%20Marianela,%20quisiera%20pedir%20turno/información%20sobre%20Orientación%20Vocacional%20y%20Laboral." target="_blank" rel="noopener" class="service-card">
+
+
+          <!-- ORIENTACIÓN -->
+
+          <a
+            href="https://wa.me/543496465492?text=Hola%20Marianela%2C%20quisiera%20pedir%20turno%2Finformaci%C3%B3n%20sobre%20Orientaci%C3%B3n%20Vocacional%20y%20Laboral"
+            target="_blank"
+            rel="noopener"
+            class="service-card"
+          >
+
             <div>
-              <h3><img src="nuevo logo.png" alt="" class="item-icon-logo"> Orientación Vocacional y Laboral</h3>
-              <p>Un espacio para pensar elecciones, transiciones y proyectos de vida.</p>
+
+              <h3>
+
+                <img
+                  src="NUEVOLOGO.png"
+                  alt=""
+                  class="item-icon-logo"
+                >
+
+                Orientación Vocacional y Laboral
+
+              </h3>
+
+              <p>
+                Un espacio para pensar elecciones, transiciones y proyectos
+                de vida.
+              </p>
+
             </div>
-            <span class="btn-turn">Pedir turno por WhatsApp &rarr;</span>
+
+            <span class="btn-turn">
+              Pedir turno por WhatsApp →
+            </span>
+
           </a>
 
-          <a href="https://wa.me/543496465492?text=Hola%20Marianela,%20quisiera%20pedir%20turno/información%20sobre%20Acompañamiento%20en%20Educación%20Superior." target="_blank" rel="noopener" class="service-card">
+
+          <!-- EDUCACIÓN SUPERIOR -->
+
+          <a
+            href="https://wa.me/543496465492?text=Hola%20Marianela%2C%20quisiera%20pedir%20turno%2Finformaci%C3%B3n%20sobre%20Acompa%C3%B1amiento%20en%20Educaci%C3%B3n%20Superior"
+            target="_blank"
+            rel="noopener"
+            class="service-card"
+          >
+
             <div>
-              <h3><img src="nuevo logo.png" alt="" class="item-icon-logo"> Acompañamiento en Educación Superior</h3>
-              <p>Si sos estudiante y necesitás un espacio para potenciar tu aprendizaje y acompañar tu trayectoria.</p>
+
+              <h3>
+
+                <img
+                  src="NUEVOLOGO.png"
+                  alt=""
+                  class="item-icon-logo"
+                >
+
+                Acompañamiento en Educación Superior
+
+              </h3>
+
+              <p>
+                Si sos estudiante y necesitás un espacio para potenciar tu
+                aprendizaje y acompañar tu trayectoria.
+              </p>
+
             </div>
-            <span class="btn-turn">Pedir turno por WhatsApp &rarr;</span>
+
+            <span class="btn-turn">
+              Pedir turno por WhatsApp →
+            </span>
+
           </a>
 
-          <a href="https://wa.me/543496465492?text=Hola%20Marianela,%20quisiera%20pedir%20turno/información%20sobre%20Asesorías%20a%20Profesionales." target="_blank" rel="noopener" class="service-card">
+
+          <!-- PROFESIONALES -->
+
+          <a
+            href="https://wa.me/543496465492?text=Hola%20Marianela%2C%20quisiera%20pedir%20turno%2Finformaci%C3%B3n%20sobre%20Asesor%C3%ADas%20a%20Profesionales"
+            target="_blank"
+            rel="noopener"
+            class="service-card"
+          >
+
             <div>
-              <h3><img src="nuevo logo.png" alt="" class="item-icon-logo"> Asesorías a Profesionales</h3>
-              <p>Psicopedagogos/as y profesionales de la salud/educación que buscan un espacio horizontal para pensar casos, prácticas y su propio recorrido profesional.</p>
+
+              <h3>
+
+                <img
+                  src="NUEVOLOGO.png"
+                  alt=""
+                  class="item-icon-logo"
+                >
+
+                Asesorías a Profesionales
+
+              </h3>
+
+              <p>
+                Psicopedagogos/as y profesionales de la salud/educación que
+                buscan un espacio horizontal para pensar casos, prácticas y
+                su propio recorrido profesional.
+              </p>
+
             </div>
-            <span class="btn-turn">Pedir turno por WhatsApp &rarr;</span>
+
+            <span class="btn-turn">
+              Pedir turno por WhatsApp →
+            </span>
+
           </a>
 
-          <a href="https://wa.me/543496465492?text=Hola%20Marianela,%20quisiera%20pedir%20información%20y%20temáticas%20sobre%20Capacitaciones." target="_blank" rel="noopener" class="service-card">
+
+          <!-- CAPACITACIONES -->
+
+          <a
+            href="https://wa.me/543496465492?text=Hola%20Marianela%2C%20quisiera%20pedir%20informaci%C3%B3n%20y%20tem%C3%A1ticas%20sobre%20Capacitaciones"
+            target="_blank"
+            rel="noopener"
+            class="service-card"
+          >
+
             <div>
-              <h3><img src="nuevo logo.png" alt="" class="item-icon-logo"> Capacitaciones</h3>
-              <p>Espacios de formación y aprendizaje (abordaje de neurodivergencias, psicopedagogía, formaciones y talleres). Pedí información sobre las próximas fechas.</p>
+
+              <h3>
+
+                <img
+                  src="NUEVOLOGO.png"
+                  alt=""
+                  class="item-icon-logo"
+                >
+
+                Capacitaciones
+
+              </h3>
+
+              <p>
+                Espacios de formación y aprendizaje sobre abordaje de
+                neurodivergencias, psicopedagogía, formaciones y talleres.
+                Pedí información sobre las próximas fechas.
+              </p>
+
             </div>
-            <span class="btn-turn">Consultar por WhatsApp &rarr;</span>
+
+            <span class="btn-turn">
+              Consultar por WhatsApp →
+            </span>
+
           </a>
+
 
         </div>
+
       </div>
+
     </section>
 
-    <!-- 4. NOVEDADES / WORKSHOPS -->
+
+    <!-- =========================
+         4. NOVEDADES
+    ========================= -->
+
     <section class="news-section" id="novedades">
+
       <div class="container">
-        <h2 class="section-title">Novedades</h2>
-        <p class="section-subtitle">Próximos talleres y espacios de formación:</p>
+
+        <h2 class="section-title">
+          Novedades
+        </h2>
+
+        <p class="section-subtitle">
+          Próximos talleres y espacios de formación:
+        </p>
+
 
         <div class="news-grid">
-          
-          <div class="news-card">
-            <div>
-              <span class="news-tag"><img src="nuevo logo.png" alt=""> Modalidad Virtual</span>
-              <div class="news-date">24 de Octubre</div>
-              <h3 class="news-title">Workshop de iniciación a la orientación vocacional</h3>
-              <p class="news-info">Próximamente más información.</p>
-            </div>
-            <a href="https://wa.me/543496465492?text=Hola%20Marianela,%20quisiera%20más%20información%20sobre%20el%20Workshop%20del%2024/10." target="_blank" rel="noopener" class="news-link">
-              Consultar por WhatsApp &rarr;
-            </a>
-          </div>
+
+
+          <!-- WORKSHOP 24 OCTUBRE -->
 
           <div class="news-card">
+
             <div>
-              <span class="news-tag"><img src="nuevo logo.png" alt=""> Modalidad Virtual</span>
-              <div class="news-date">31 de Octubre</div>
-              <h3 class="news-title">Workshop de acompañamiento psicopedagógico en Educación Superior</h3>
-              <p class="news-info">Próximamente más información.</p>
+
+              <span class="news-tag">
+
+                <img
+                  src="NUEVOLOGO.png"
+                  alt=""
+                >
+
+                Modalidad Virtual
+
+              </span>
+
+
+              <div class="news-date">
+                24 de Octubre
+              </div>
+
+
+              <h3 class="news-title">
+                Workshop de iniciación a la orientación vocacional
+              </h3>
+
+
+              <p class="news-info">
+                Próximamente más información.
+              </p>
+
             </div>
-            <a href="https://wa.me/543496465492?text=Hola%20Marianela,%20quisiera%20más%20información%20sobre%20el%20Workshop%20del%2031/10." target="_blank" rel="noopener" class="news-link">
-              Consultar por WhatsApp &rarr;
+
+
+            <a
+              href="https://wa.me/543496465492?text=Hola%20Marianela%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20Workshop%20del%2024%2F10"
+              target="_blank"
+              rel="noopener"
+              class="news-link"
+            >
+              Consultar por WhatsApp →
             </a>
+
           </div>
+
+
+          <!-- WORKSHOP 31 OCTUBRE -->
+
+          <div class="news-card">
+
+            <div>
+
+              <span class="news-tag">
+
+                <img
+                  src="NUEVOLOGO.png"
+                  alt=""
+                >
+
+                Modalidad Virtual
+
+              </span>
+
+
+              <div class="news-date">
+                31 de Octubre
+              </div>
+
+
+              <h3 class="news-title">
+                Workshop de acompañamiento psicopedagógico en Educación Superior
+              </h3>
+
+
+              <p class="news-info">
+                Próximamente más información.
+              </p>
+
+            </div>
+
+
+            <a
+              href="https://wa.me/543496465492?text=Hola%20Marianela%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20Workshop%20del%2031%2F10"
+              target="_blank"
+              rel="noopener"
+              class="news-link"
+            >
+              Consultar por WhatsApp →
+            </a>
+
+          </div>
+
 
         </div>
+
       </div>
+
     </section>
 
-    <!-- 5. CONTACTO -->
+
+    <!-- =========================
+         5. CONTACTO
+    ========================= -->
+
     <section class="contact-section" id="contacto">
+
       <div class="container">
-        <h2 class="section-title">Contacto</h2>
-        <p>Ponete en contacto o seguí mis contenidos en las redes:</p>
+
+        <h2 class="section-title">
+          Contacto
+        </h2>
+
+        <p>
+          Ponete en contacto o seguí mis contenidos en las redes:
+        </p>
+
 
         <div class="contact-buttons">
-          <a href="https://wa.me/543496465492?text=Hola%20Marianela,%20quisiera%20hacerte%20una%20consulta." target="_blank" rel="noopener" class="btn btn-whatsapp">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+
+
+          <!-- WHATSAPP -->
+
+          <a
+            href="https://wa.me/543496465492?text=Hola%20Marianela%2C%20quisiera%20hacerte%20una%20consulta"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-whatsapp"
+          >
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            WhatsApp
+
           </a>
 
-          <a href="mailto:lic.marianelaexner@gmail.com" class="btn btn-email">
-            <i class="fa-regular fa-envelope"></i> Email
+
+          <!-- EMAIL -->
+
+          <a
+            href="mailto:lic.marianelaexner@gmail.com"
+            class="btn btn-email"
+          >
+
+            <i class="fa-regular fa-envelope"></i>
+
+            Email
+
           </a>
 
-          <a href="https://www.instagram.com/lic.marianelaexner/" target="_blank" rel="noopener" class="btn btn-instagram">
-            <i class="fa-brands fa-instagram"></i> Instagram
+
+          <!-- INSTAGRAM -->
+
+          <a
+            href="https://www.instagram.com/lic.marianelaexner/"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-instagram"
+          >
+
+            <i class="fa-brands fa-instagram"></i>
+
+            Instagram
+
           </a>
 
-          <a href="https://open.spotify.com/show/033mZ5WBgomsetxJ4fOziD?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAadJrHsglV774ahmvyYksxKIQulempniDSiSotoaumfaDXdUyd51LYknYspcrQ_aem_7kKxNSrP1DOL57vWvm9LsQ" target="_blank" rel="noopener" class="btn btn-spotify">
-            <i class="fa-brands fa-spotify"></i> Podcast en Spotify
+
+          <!-- SPOTIFY -->
+
+          <a
+            href="https://open.spotify.com/show/033mZ5WBgomsetxJ4fOziD"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-spotify"
+          >
+
+            <i class="fa-brands fa-spotify"></i>
+
+            Podcast en Spotify
+
           </a>
+
+
         </div>
+
       </div>
+
     </section>
 
   </main>
 
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
-    <p>&copy; Marianela Exner - Lic. en Psicopedagogía. Todos los derechos reservados.</p>
+
+    <p>
+      © Marianela Exner - Lic. en Psicopedagogía.
+      Todos los derechos reservados.
+    </p>
+
   </footer>
+
 
 </body>
 </html>
