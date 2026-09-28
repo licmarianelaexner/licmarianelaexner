@@ -16,12 +16,12 @@
 
   <style>
     :root {
-      --primary: #4B6B75;      /* Azul grisáceo principal */
-      --secondary: #7FA9B0;    /* Verde agua secundario */
-      --accent: #679CA8;       /* Azul acento */
-      --bg-light: #F7FAFA;     /* Fondo suave */
-      --text-dark: #2C3E45;
-      --text-muted: #556B72;
+      --primary: #516F7D;       /* Azul petróleo / Gris azulado oscuro del logo */
+      --secondary: #A2B7B8;     /* Verde agua / Gris verdoso claro del logo */
+      --accent: #B9A3C7;        /* Lila / Violeta suave del corazón del logo */
+      --bg-light: #F4F7F8;      /* Fondo suave complementario */
+      --text-dark: #2A363B;
+      --text-muted: #516F7D;
       --white: #FFFFFF;
     }
 
@@ -40,6 +40,16 @@
       background-color: var(--bg-light);
       color: var(--text-dark);
       line-height: 1.6;
+    }
+
+    /* Ícono del logo para ítems y tarjetas */
+    .item-icon-logo {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+      vertical-align: middle;
+      margin-right: 8px;
+      flex-shrink: 0;
     }
 
     /* Navegación centrada con Banner ampliado */
@@ -86,7 +96,7 @@
     }
 
     nav a:hover {
-      color: var(--secondary);
+      color: var(--accent);
     }
 
     /* 1. Portada (Hero) */
@@ -129,11 +139,11 @@
       font-weight: 600;
       font-size: 1rem;
       transition: background-color 0.2s, transform 0.2s;
-      box-shadow: 0 4px 12px rgba(75, 107, 117, 0.25);
+      box-shadow: 0 4px 12px rgba(81, 111, 125, 0.25);
     }
 
     .btn-cta:hover {
-      background-color: #38525A;
+      background-color: #3E5763;
       transform: translateY(-2px);
     }
 
@@ -150,7 +160,7 @@
       object-fit: contain;
     }
 
-    /* 2. Sección Diferencial / Propuesta de Valor (Foto 2 a la izquierda) */
+    /* 2. Sección Diferencial / Propuesta de Valor */
     .differential-section {
       background-color: var(--white);
       padding: 4.5rem 2rem;
@@ -284,7 +294,7 @@
     .service-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      border-top-color: var(--primary);
+      border-top-color: var(--accent);
     }
 
     .service-card h3 {
@@ -294,6 +304,8 @@
       margin-bottom: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
     }
 
     .service-card p {
@@ -307,7 +319,7 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      color: var(--accent);
+      color: var(--primary);
       font-weight: 600;
       font-size: 0.88rem;
       margin-top: auto;
@@ -332,7 +344,7 @@
       background-color: var(--bg-light);
       padding: 2rem;
       border-radius: 16px;
-      border-left: 5px solid var(--primary);
+      border-left: 5px solid var(--accent);
       box-shadow: 0 4px 15px rgba(0,0,0,0.03);
       display: flex;
       flex-direction: column;
@@ -340,8 +352,9 @@
     }
 
     .news-tag {
-      display: inline-block;
-      background-color: var(--secondary);
+      display: inline-flex;
+      align-items: center;
+      background-color: var(--accent);
       color: var(--white);
       font-size: 0.75rem;
       font-weight: 700;
@@ -351,6 +364,13 @@
       letter-spacing: 0.5px;
       margin-bottom: 1rem;
       width: fit-content;
+    }
+
+    .news-tag img {
+      width: 14px;
+      height: 14px;
+      margin-right: 6px;
+      filter: brightness(0) invert(1);
     }
 
     .news-date {
@@ -387,7 +407,7 @@
     }
 
     .news-link:hover {
-      color: var(--secondary);
+      color: var(--accent);
     }
 
     /* 5. Sección Contacto */
@@ -427,16 +447,16 @@
     }
 
     .btn-whatsapp { background-color: var(--primary); }
-    .btn-whatsapp:hover { background-color: #38525A; }
+    .btn-whatsapp:hover { background-color: #3E5763; }
 
-    .btn-email { background-color: #556B72; }
-    .btn-email:hover { background-color: #3E5157; }
+    .btn-email { background-color: var(--secondary); }
+    .btn-email:hover { background-color: #8CA3A4; }
 
-    .btn-instagram { background-color: var(--secondary); }
-    .btn-instagram:hover { background-color: #628E95; }
+    .btn-instagram { background-color: var(--accent); }
+    .btn-instagram:hover { background-color: #A38CB3; }
 
-    .btn-spotify { background-color: var(--accent); }
-    .btn-spotify:hover { background-color: #4D818C; }
+    .btn-spotify { background-color: var(--primary); }
+    .btn-spotify:hover { background-color: #3E5763; }
 
     footer {
       text-align: center;
@@ -497,7 +517,7 @@
 <body>
 
   <header>
-    <!-- Logo en formato Banner de doble tamaño -->
+    <!-- Logo en formato Banner -->
     <a href="#" class="logo-header">
       <img src="banner.png" alt="Lic. en psicopedagogía Marianela Exner" onerror="this.outerHTML='<span style=\'font-weight:700;color:var(--primary);font-size:1.5rem;\'>Lic. en psicopedagogía Marianela Exner</span>';">
     </a>
@@ -547,12 +567,24 @@
           <p class="pillars-title">Pilares claves de mi propuesta:</p>
           
           <div class="pillars-grid">
-            <div class="pillar-card">Orientación vocacional</div>
-            <div class="pillar-card">Rediseño profesional y laboral</div>
-            <div class="pillar-card">Acompañamiento a estudiantes de educación superior</div>
-            <div class="pillar-card">Abordaje en neurodivergencias</div>
-            <div class="pillar-card">Capacitaciones y talleres</div>
-            <div class="pillar-card">Espacios de horizontalidad para profesionales y colegas</div>
+            <div class="pillar-card">
+              <img src="nuevo logo.png" alt="" class="item-icon-logo"> Orientación vocacional
+            </div>
+            <div class="pillar-card">
+              <img src="nuevo logo.png" alt="" class="item-icon-logo"> Rediseño profesional y laboral
+            </div>
+            <div class="pillar-card">
+              <img src="nuevo logo.png" alt="" class="item-icon-logo"> Acompañamiento a estudiantes de educación superior
+            </div>
+            <div class="pillar-card">
+              <img src="nuevo logo.png" alt="" class="item-icon-logo"> Abordaje en neurodivergencias
+            </div>
+            <div class="pillar-card">
+              <img src="nuevo logo.png" alt="" class="item-icon-logo"> Capacitaciones y talleres
+            </div>
+            <div class="pillar-card">
+              <img src="nuevo logo.png" alt="" class="item-icon-logo"> Espacios de horizontalidad para profesionales y colegas
+            </div>
           </div>
         </div>
 
@@ -569,7 +601,7 @@
           
           <a href="https://wa.me/543496465492?text=Hola%20Marianela,%20quisiera%20pedir%20turno/información%20sobre%20Orientación%20Vocacional%20y%20Laboral." target="_blank" rel="noopener" class="service-card">
             <div>
-              <h3>Orientación Vocacional y Laboral</h3>
+              <h3><img src="nuevo logo.png" alt="" class="item-icon-logo"> Orientación Vocacional y Laboral</h3>
               <p>Un espacio para pensar elecciones, transiciones y proyectos de vida.</p>
             </div>
             <span class="btn-turn">Pedir turno por WhatsApp &rarr;</span>
@@ -577,7 +609,7 @@
 
           <a href="https://wa.me/543496465492?text=Hola%20Marianela,%20quisiera%20pedir%20turno/información%20sobre%20Acompañamiento%20en%20Educación%20Superior." target="_blank" rel="noopener" class="service-card">
             <div>
-              <h3>Acompañamiento en Educación Superior</h3>
+              <h3><img src="nuevo logo.png" alt="" class="item-icon-logo"> Acompañamiento en Educación Superior</h3>
               <p>Si sos estudiante y necesitás un espacio para potenciar tu aprendizaje y acompañar tu trayectoria.</p>
             </div>
             <span class="btn-turn">Pedir turno por WhatsApp &rarr;</span>
@@ -585,7 +617,7 @@
 
           <a href="https://wa.me/543496465492?text=Hola%20Marianela,%20quisiera%20pedir%20turno/información%20sobre%20Asesorías%20a%20Profesionales." target="_blank" rel="noopener" class="service-card">
             <div>
-              <h3>Asesorías a Profesionales</h3>
+              <h3><img src="nuevo logo.png" alt="" class="item-icon-logo"> Asesorías a Profesionales</h3>
               <p>Psicopedagogos/as y profesionales de la salud/educación que buscan un espacio horizontal para pensar casos, prácticas y su propio recorrido profesional.</p>
             </div>
             <span class="btn-turn">Pedir turno por WhatsApp &rarr;</span>
@@ -593,7 +625,7 @@
 
           <a href="https://wa.me/543496465492?text=Hola%20Marianela,%20quisiera%20pedir%20información%20y%20temáticas%20sobre%20Capacitaciones." target="_blank" rel="noopener" class="service-card">
             <div>
-              <h3>Capacitaciones</h3>
+              <h3><img src="nuevo logo.png" alt="" class="item-icon-logo"> Capacitaciones</h3>
               <p>Espacios de formación y aprendizaje (abordaje de neurodivergencias, psicopedagogía, formaciones y talleres). Pedí información sobre las próximas fechas.</p>
             </div>
             <span class="btn-turn">Consultar por WhatsApp &rarr;</span>
@@ -613,7 +645,7 @@
           
           <div class="news-card">
             <div>
-              <span class="news-tag">Modalidad Virtual</span>
+              <span class="news-tag"><img src="nuevo logo.png" alt=""> Modalidad Virtual</span>
               <div class="news-date">24 de Octubre</div>
               <h3 class="news-title">Workshop de iniciación a la orientación vocacional</h3>
               <p class="news-info">Próximamente más información.</p>
@@ -625,7 +657,7 @@
 
           <div class="news-card">
             <div>
-              <span class="news-tag">Modalidad Virtual</span>
+              <span class="news-tag"><img src="nuevo logo.png" alt=""> Modalidad Virtual</span>
               <div class="news-date">31 de Octubre</div>
               <h3 class="news-title">Workshop de acompañamiento psicopedagógico en Educación Superior</h3>
               <p class="news-info">Próximamente más información.</p>
