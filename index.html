@@ -5,11 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Lic. en Psicopedagogía Marianela Exner</title>
-  <meta name="description" content="Orientación vocacional y laboral, acompañamiento en Educación Superior y capacitaciones grabadas. Lic. Marianela Exner.">
+  <meta name="description" content="Orientación para elegir, transitar y rediseñar tus proyectos. Servicios psicopedagógicos y capacitaciones grabadas. Lic. Marianela Exner.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  >
 
   <style>
     :root {
@@ -17,12 +25,11 @@
       --secondary: #A2B7B8;
       --accent: #B9A3C7;
       --background: #F4F7F8;
-      --lavender: #F3EEF7;
+      --lavender: #F0E9F5;
       --text: #2A363B;
       --muted: #51616B;
       --white: #FFFFFF;
       --border: #E1E8EA;
-      --radius: 20px;
     }
 
     * {
@@ -33,7 +40,7 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 140px;
+      scroll-padding-top: 300px;
     }
 
     body {
@@ -45,7 +52,6 @@
     }
 
     img {
-      display: block;
       max-width: 100%;
       height: auto;
     }
@@ -60,17 +66,17 @@
     }
 
     .container {
-      width: min(1100px, 100%);
+      max-width: 1100px;
       margin-inline: auto;
     }
 
     .section {
-      padding: 80px 28px;
+      padding: 72px 28px;
     }
 
     .section-title {
       color: var(--primary);
-      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-size: clamp(1.8rem, 3vw, 2.2rem);
       font-weight: 600;
       line-height: 1.3;
       text-align: center;
@@ -78,68 +84,55 @@
     }
 
     .section-subtitle {
-      max-width: 680px;
+      max-width: 700px;
       margin: 0 auto 38px;
       text-align: center;
       color: var(--muted);
     }
 
-    .eyebrow {
-      display: block;
-      margin-bottom: 14px;
-      color: var(--primary);
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    /* Encabezado */
+    /* BANNER ORIGINAL */
 
     header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 5%;
+      background: var(--white);
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
       position: sticky;
       top: 0;
       z-index: 100;
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .header-inner {
-      max-width: 1200px;
-      margin: auto;
-      padding: 12px 28px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
+      gap: 1.2rem;
     }
 
     .logo-header {
-      flex: 0 1 320px;
-      min-width: 0;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
       text-decoration: none;
     }
 
     .logo-header img {
+      display: inline-block;
+      max-height: 180px;
       width: auto;
       max-width: 100%;
-      max-height: 85px;
       object-fit: contain;
+      vertical-align: middle;
     }
 
     nav {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 8px 22px;
+      gap: 0.5rem 1.8rem;
+      flex-wrap: wrap;
     }
 
     nav a {
-      padding: 8px 0;
-      color: var(--primary);
-      font-size: 0.85rem;
-      font-weight: 600;
       text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1rem;
       text-underline-offset: 6px;
     }
 
@@ -147,22 +140,22 @@
       text-decoration: underline;
     }
 
-    /* Botones */
+    /* BOTONES */
 
     .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 10px;
       min-height: 48px;
-      padding: 13px 23px;
+      padding: 0.9rem 1.6rem;
       border: 1px solid transparent;
-      border-radius: 12px;
+      border-radius: 30px;
       background: var(--primary);
       color: var(--white);
       text-decoration: none;
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       font-weight: 600;
       line-height: 1.5;
       transition: background 0.2s, transform 0.2s;
@@ -171,6 +164,10 @@
     .button:hover {
       background: #3E5763;
       transform: translateY(-2px);
+    }
+
+    .button i {
+      font-size: 1.2rem;
     }
 
     .button-secondary {
@@ -191,55 +188,64 @@
       background: #AC94BD;
     }
 
-    /* Portada */
+    /* PORTADA ORIGINAL */
 
     .hero {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 64px 28px 72px;
-      display: grid;
-      grid-template-columns: 1.15fr 1fr;
+      display: flex;
       align-items: center;
-      gap: 48px;
+      justify-content: space-between;
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+      gap: 3rem;
     }
 
-    .hero h1 {
-      max-width: 620px;
+    .hero-content {
+      flex: 1.2;
+      min-width: 0;
+    }
+
+    .hero-title {
+      font-size: 2.2rem;
+      font-weight: 700;
       color: var(--primary);
-      font-size: clamp(2rem, 3.6vw, 3rem);
-      font-weight: 600;
-      line-height: 1.2;
-      letter-spacing: -0.035em;
-      margin-bottom: 24px;
+      line-height: 1.25;
+      margin-bottom: 1.2rem;
     }
 
-    .hero-description {
-      color: var(--muted);
-      font-size: 1rem;
-      margin-bottom: 30px;
-      max-width: 540px;
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .hero-actions .button:first-child {
+      box-shadow: 0 4px 12px rgba(81, 111, 125, 0.2);
     }
 
     .hero-image {
+      flex: 1;
+      min-width: 0;
       display: flex;
       justify-content: center;
-      align-items: center;
-      min-width: 0;
-      background: radial-gradient(
-        ellipse at center,
-        #E7DDED 0%,
-        #ECF0F1 48%,
-        transparent 72%
-      );
     }
 
     .hero-image img {
-      max-height: 470px;
-      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 480px;
       object-fit: contain;
     }
 
-    /* Propuesta */
+    /* PROPUESTA */
 
     .proposal {
       background: var(--white);
@@ -250,19 +256,20 @@
       display: grid;
       grid-template-columns: 0.85fr 1.2fr;
       align-items: center;
-      gap: 60px;
+      gap: 48px;
     }
 
     .proposal-photo {
+      display: block;
       width: 100%;
-      max-width: 390px;
+      max-width: 400px;
       margin-inline: auto;
-      border-radius: var(--radius);
+      border-radius: 18px;
     }
 
     .proposal h2 {
       color: var(--primary);
-      font-size: clamp(1.6rem, 2.7vw, 2rem);
+      font-size: clamp(1.45rem, 2.5vw, 1.9rem);
       font-weight: 600;
       line-height: 1.35;
       margin-bottom: 20px;
@@ -295,7 +302,7 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       background: var(--background);
-      font-size: 0.82rem;
+      font-size: 0.85rem;
       font-weight: 500;
       line-height: 1.5;
     }
@@ -307,7 +314,7 @@
       flex-shrink: 0;
     }
 
-    /* Servicios */
+    /* SERVICIOS */
 
     .services-grid {
       display: grid;
@@ -322,7 +329,7 @@
       padding: 30px;
       background: var(--white);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
+      border-radius: 18px;
       text-decoration: none;
       box-shadow: 0 3px 12px rgba(42, 54, 59, 0.025);
       transition: transform 0.2s, border-color 0.2s;
@@ -334,8 +341,8 @@
     }
 
     .service-card > img {
-      width: 34px;
-      height: 34px;
+      width: 32px;
+      height: 32px;
       object-fit: contain;
       margin-bottom: 20px;
     }
@@ -350,27 +357,72 @@
 
     .service-card p {
       color: var(--muted);
-      font-size: 0.92rem;
+      font-size: 0.93rem;
       margin-bottom: 24px;
     }
 
     .service-link {
       margin-top: auto;
-      padding-top: 4px;
       color: var(--primary);
       font-size: 0.85rem;
       font-weight: 700;
     }
 
-    /* Capacitaciones */
+    /* CAPACITACIONES GRABADAS */
 
     .training {
       background: var(--lavender);
-      border-block: 1px solid #E5DDEB;
+      border-block: 1px solid #E1D5E9;
+      padding-block: 84px;
     }
 
     .training-heading {
       text-align: center;
+    }
+
+    .training-eyebrow {
+      display: inline-block;
+      color: #594365;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .training .section-title {
+      font-size: clamp(2.1rem, 4.5vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .training .section-subtitle {
+      font-size: 1.05rem;
+      margin-bottom: 26px;
+    }
+
+    .training-benefits {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px 22px;
+      max-width: 900px;
+      margin: 0 auto 38px;
+      padding: 18px 22px;
+      border: 1px solid #DCCDE5;
+      border-radius: 16px;
+      background: #E6DAED;
+      color: #493652;
+      list-style: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .training-benefits li {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
     }
 
     .training-grid {
@@ -385,25 +437,36 @@
       align-items: flex-start;
       padding: 34px;
       background: var(--white);
-      border: 1px solid #E5DDEB;
-      border-radius: var(--radius);
-      box-shadow: 0 4px 16px rgba(81, 63, 95, 0.035);
+      border: 1px solid #DED1E6;
+      border-top: 5px solid var(--accent);
+      border-radius: 20px;
+      box-shadow: 0 5px 18px rgba(81, 63, 95, 0.045);
     }
 
     .training-tag {
       display: inline-block;
       padding: 6px 12px;
-      margin-bottom: 22px;
+      margin-bottom: 12px;
       border-radius: 30px;
       background: var(--lavender);
-      color: #584663;
-      font-size: 0.75rem;
-      font-weight: 600;
+      color: #594365;
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+
+    .training-mode {
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-bottom: 22px;
+    }
+
+    .training-mode i {
+      margin-right: 5px;
     }
 
     .training-card h3 {
       color: var(--primary);
-      font-size: 1.4rem;
+      font-size: 1.45rem;
       font-weight: 600;
       line-height: 1.35;
       margin-bottom: 18px;
@@ -411,39 +474,46 @@
 
     .training-description {
       color: var(--muted);
-      font-size: 0.93rem;
+      font-size: 0.95rem;
       margin-bottom: 22px;
     }
 
     .includes-title {
       color: var(--text);
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       font-weight: 600;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .includes {
-      padding-left: 20px;
-      margin-bottom: 28px;
+      margin-bottom: 30px;
       color: var(--muted);
-      font-size: 0.88rem;
+      font-size: 0.9rem;
+      list-style: none;
     }
 
     .includes li {
-      padding-left: 3px;
-      margin-bottom: 7px;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 10px;
     }
 
-    .includes li::marker {
-      color: #796189;
+    .includes i {
+      color: #725381;
+      flex-shrink: 0;
     }
 
     .training-card .button {
       width: 100%;
+      min-height: 56px;
       margin-top: auto;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 700;
     }
 
-    /* Contacto */
+    /* CONTACTO */
 
     .contact {
       text-align: center;
@@ -462,98 +532,96 @@
       border-top: 1px solid var(--border);
       color: var(--muted);
       text-align: center;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
     }
 
-    /* Pantallas medianas y celulares */
+    /* CELULARES */
 
-    @media (max-width: 900px) {
-      .header-inner {
-        flex-direction: column;
-        gap: 5px;
+    @media (max-width: 820px) {
+      html {
+        scroll-padding-top: 260px;
       }
 
-      .logo-header {
-        flex: none;
-        max-width: 280px;
+      header {
+        padding: 1rem 5%;
+        gap: 1rem;
       }
 
       .logo-header img {
-        max-height: 65px;
-        margin-inline: auto;
+        max-height: 120px;
       }
 
       nav {
-        gap: 4px 18px;
-      }
-
-      .hero {
-        gap: 28px;
-      }
-
-      .proposal-grid {
-        gap: 30px;
-      }
-
-      .pillars {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      html {
-        scroll-padding-top: 175px;
-      }
-
-      .header-inner {
-        padding: 10px 16px;
-      }
-
-      .logo-header {
-        max-width: 245px;
-      }
-
-      nav {
-        gap: 0 14px;
+        gap: 0.5rem 1rem;
       }
 
       nav a {
-        font-size: 0.73rem;
-        padding: 7px 0;
+        font-size: 0.85rem;
       }
 
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        margin: 1.5rem auto;
+      }
+
+      .hero-title {
+        font-size: 1.8rem;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .proposal-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .proposal-photo {
+        max-width: 340px;
+      }
+    }
+
+    @media (max-width: 600px) {
       .section {
         padding: 54px 20px;
       }
 
       .hero {
-        grid-template-columns: 1fr;
-        padding: 42px 20px 48px;
-        text-align: center;
+        padding-inline: 20px;
+        gap: 28px;
       }
 
-      .hero h1,
-      .hero-description {
-        margin-inline: auto;
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
       }
 
       .hero-image img {
-        max-height: 340px;
+        max-height: 360px;
       }
 
-      .proposal-grid,
+      .pillars,
       .services-grid,
       .training-grid {
         grid-template-columns: 1fr;
       }
 
-      .proposal-photo {
-        max-width: 300px;
-      }
-
       .service-card,
       .training-card {
         padding: 26px;
+      }
+
+      .training-card {
+        padding-top: 28px;
+      }
+
+      .training-benefits {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: left;
+        gap: 12px;
       }
 
       .contact-buttons {
@@ -578,45 +646,52 @@
 </head>
 
 <body>
-  <header>
-    <div class="header-inner">
-      <a href="#inicio" class="logo-header">
-        <img
-          src="banner.png"
-          alt="Lic. en Psicopedagogía Marianela Exner"
-        >
-      </a>
 
-      <nav aria-label="Navegación principal">
-        <a href="#inicio">Inicio</a>
-        <a href="#propuesta">Propuesta</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#capacitaciones">Capacitaciones</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </div>
+  <!-- BANNER -->
+
+  <header>
+    <a href="#inicio" class="logo-header">
+      <img
+        src="banner.png"
+        alt="Lic. en Psicopedagogía Marianela Exner"
+      >
+    </a>
+
+    <nav aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#propuesta">Propuesta</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#capacitaciones">Capacitaciones</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
   </header>
 
   <main>
+
     <!-- PORTADA -->
 
     <section class="hero" id="inicio">
-      <div>
-        <span class="eyebrow">Lic. Marianela Exner</span>
-
-        <h1>
+      <div class="hero-content">
+        <h1 class="hero-title">
           Orientación para elegir, transitar y rediseñar tus proyectos.
         </h1>
 
-        <p class="hero-description">
+        <p class="hero-subtitle">
           Acompaño adolescentes, jóvenes y adultos en momentos de elección,
           transición y cambio, con una mirada que contempla las singularidades
           de cada trayectoria.
         </p>
 
-        <a href="#servicios" class="button">
-          Quiero conocer la propuesta →
-        </a>
+        <div class="hero-actions">
+          <a href="#servicios" class="button">
+            Quiero conocer la propuesta →
+          </a>
+
+          <a href="#capacitaciones" class="button button-lavender">
+            <i class="fa-solid fa-circle-play" aria-hidden="true"></i>
+            Ver capacitaciones grabadas
+          </a>
+        </div>
       </div>
 
       <div class="hero-image">
@@ -632,16 +707,16 @@
 
     <section class="section proposal" id="propuesta">
       <div class="container proposal-grid">
-        <img
-          class="proposal-photo"
-          src="foto2.png"
-          alt="Marianela Exner, licenciada en Psicopedagogía"
-          loading="lazy"
-        >
+        <div>
+          <img
+            class="proposal-photo"
+            src="foto2.png"
+            alt="Marianela Exner, licenciada en Psicopedagogía"
+            loading="lazy"
+          >
+        </div>
 
         <div>
-          <span class="eyebrow">Mi propuesta</span>
-
           <h2>No se trata solamente de elegir una carrera.</h2>
 
           <p class="proposal-description">
@@ -657,22 +732,27 @@
               <img src="NUEVOLOGO.png" alt="" class="small-logo" loading="lazy">
               Orientación vocacional
             </li>
+
             <li>
               <img src="NUEVOLOGO.png" alt="" class="small-logo" loading="lazy">
               Rediseño profesional y laboral
             </li>
+
             <li>
               <img src="NUEVOLOGO.png" alt="" class="small-logo" loading="lazy">
               Acompañamiento a estudiantes de educación superior
             </li>
+
             <li>
               <img src="NUEVOLOGO.png" alt="" class="small-logo" loading="lazy">
               Abordaje en neurodivergencias
             </li>
+
             <li>
               <img src="NUEVOLOGO.png" alt="" class="small-logo" loading="lazy">
               Capacitaciones y talleres
             </li>
+
             <li>
               <img src="NUEVOLOGO.png" alt="" class="small-logo" loading="lazy">
               Espacios de horizontalidad para profesionales y colegas
@@ -687,11 +767,13 @@
     <section class="section" id="servicios">
       <div class="container">
         <h2 class="section-title">Servicios</h2>
+
         <p class="section-subtitle">
           Elegí la opción que mejor se adapte a tu momento actual.
         </p>
 
         <div class="services-grid">
+
           <a
             class="service-card"
             href="https://wa.me/543496465492?text=Hola%20Marianela%2C%20quisiera%20informaci%C3%B3n%20sobre%20orientaci%C3%B3n%20vocacional%20y%20laboral."
@@ -700,11 +782,15 @@
           >
             <img src="NUEVOLOGO.png" alt="" loading="lazy">
             <h3>Orientación vocacional y laboral</h3>
+
             <p>
               Un espacio para pensar elecciones, transiciones y proyectos
               de vida.
             </p>
-            <span class="service-link">Pedir turno por WhatsApp →</span>
+
+            <span class="service-link">
+              Pedir turno por WhatsApp →
+            </span>
           </a>
 
           <a
@@ -715,11 +801,15 @@
           >
             <img src="NUEVOLOGO.png" alt="" loading="lazy">
             <h3>Acompañamiento en Educación Superior</h3>
+
             <p>
               Si sos estudiante y necesitás un espacio para potenciar tu
               aprendizaje y acompañar tu trayectoria.
             </p>
-            <span class="service-link">Pedir turno por WhatsApp →</span>
+
+            <span class="service-link">
+              Pedir turno por WhatsApp →
+            </span>
           </a>
 
           <a
@@ -730,24 +820,33 @@
           >
             <img src="NUEVOLOGO.png" alt="" loading="lazy">
             <h3>Asesorías a profesionales</h3>
+
             <p>
               Para psicopedagogos/as y profesionales de la salud y la educación
               que buscan un espacio horizontal para pensar casos, prácticas
               y su propio recorrido profesional.
             </p>
-            <span class="service-link">Consultar por WhatsApp →</span>
+
+            <span class="service-link">
+              Consultar por WhatsApp →
+            </span>
           </a>
 
           <a class="service-card" href="#capacitaciones">
             <img src="NUEVOLOGO.png" alt="" loading="lazy">
             <h3>Capacitaciones y talleres</h3>
+
             <p>
               Espacios de formación y aprendizaje para enriquecer tu práctica
               psicopedagógica. Conocé las capacitaciones grabadas y
               realizalas a tu ritmo.
             </p>
-            <span class="service-link">Ver capacitaciones grabadas →</span>
+
+            <span class="service-link">
+              Ver capacitaciones grabadas →
+            </span>
           </a>
+
         </div>
       </div>
     </section>
@@ -756,18 +855,46 @@
 
     <section class="section training" id="capacitaciones">
       <div class="container">
+
         <div class="training-heading">
-          <span class="eyebrow">Capacitaciones</span>
-          <h2 class="section-title">Adquirí tu capacitación grabada</h2>
+          <span class="training-eyebrow">Capacitaciones grabadas</span>
+
+          <h2 class="section-title">Capacitate a tu ritmo</h2>
+
           <p class="section-subtitle">
-            Formate a tu ritmo, con propuestas que articulan conceptos,
-            herramientas y experiencias de la práctica psicopedagógica.
+            Adquirí las capacitaciones grabadas y sumá herramientas
+            para tu práctica profesional.
           </p>
         </div>
 
+        <ul class="training-benefits" aria-label="Materiales incluidos">
+          <li>
+            <i class="fa-solid fa-circle-play" aria-hidden="true"></i>
+            Grabación
+          </li>
+          <li>
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            Bibliografía
+          </li>
+          <li>
+            <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+            Cuadernillo
+          </li>
+          <li>
+            <i class="fa-solid fa-award" aria-hidden="true"></i>
+            Certificado
+          </li>
+        </ul>
+
         <div class="training-grid">
+
           <article class="training-card">
-            <span class="training-tag">Grabada · A tu ritmo</span>
+            <span class="training-tag">Disponible para adquirir</span>
+
+            <p class="training-mode">
+              <i class="fa-solid fa-circle-play" aria-hidden="true"></i>
+              Grabada · A tu ritmo
+            </p>
 
             <h3>Iniciación a la Orientación Vocacional</h3>
 
@@ -777,27 +904,46 @@
               trabajar en este campo.
             </p>
 
-            <p class="includes-title">Incluye:</p>
+            <p class="includes-title">¿Qué incluye?</p>
+
             <ul class="includes">
-              <li>Grabación del encuentro.</li>
-              <li>Bibliografía.</li>
-              <li>Cuadernillo de 28 técnicas.</li>
-              <li>Certificado.</li>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                Grabación del encuentro.
+              </li>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                Bibliografía.
+              </li>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                Cuadernillo de 28 técnicas.
+              </li>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                Certificado.
+              </li>
             </ul>
 
             <a
               class="button"
-              href="https://wa.me/543496465492?text=Hola%20Marianela%2C%20quiero%20consultar%20para%20adquirir%20la%20capacitaci%C3%B3n%20grabada%20de%20Iniciaci%C3%B3n%20a%20la%20Orientaci%C3%B3n%20Vocacional."
+              href="https://wa.me/543496465492?text=Hola%20Marianela%2C%20quiero%20adquirir%20la%20capacitaci%C3%B3n%20grabada%20de%20Iniciaci%C3%B3n%20a%20la%20Orientaci%C3%B3n%20Vocacional.%20%C2%BFMe%20pas%C3%A1s%20el%20valor%20y%20c%C3%B3mo%20comprarla%3F"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Consultar y adquirir Iniciación a la Orientación Vocacional por WhatsApp"
+              aria-label="Consultar por WhatsApp para adquirir Iniciación a la Orientación Vocacional"
             >
-              Consultar y adquirir por WhatsApp →
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              Quiero esta capacitación
             </a>
           </article>
 
           <article class="training-card">
-            <span class="training-tag">Grabada · A tu ritmo</span>
+            <span class="training-tag">Disponible para adquirir</span>
+
+            <p class="training-mode">
+              <i class="fa-solid fa-circle-play" aria-hidden="true"></i>
+              Grabada · A tu ritmo
+            </p>
 
             <h3>Psicopedagogía clínica en Educación Superior</h3>
 
@@ -807,23 +953,39 @@
               aprendizaje y neurodivergencias.
             </p>
 
-            <p class="includes-title">Incluye:</p>
+            <p class="includes-title">¿Qué incluye?</p>
+
             <ul class="includes">
-              <li>Grabación del encuentro.</li>
-              <li>Bibliografía.</li>
-              <li>Certificado.</li>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                Grabación del encuentro.
+              </li>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                Bibliografía.
+              </li>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                Cuadernillo con técnicas y actividades.
+              </li>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                Certificado.
+              </li>
             </ul>
 
             <a
               class="button"
-              href="https://wa.me/543496465492?text=Hola%20Marianela%2C%20quiero%20consultar%20para%20adquirir%20la%20capacitaci%C3%B3n%20grabada%20de%20Psicopedagog%C3%ADa%20cl%C3%ADnica%20en%20Educaci%C3%B3n%20Superior."
+              href="https://wa.me/543496465492?text=Hola%20Marianela%2C%20quiero%20adquirir%20la%20capacitaci%C3%B3n%20grabada%20de%20Psicopedagog%C3%ADa%20cl%C3%ADnica%20en%20Educaci%C3%B3n%20Superior.%20%C2%BFMe%20pas%C3%A1s%20el%20valor%20y%20c%C3%B3mo%20comprarla%3F"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Consultar y adquirir Psicopedagogía clínica en Educación Superior por WhatsApp"
+              aria-label="Consultar por WhatsApp para adquirir Psicopedagogía clínica en Educación Superior"
             >
-              Consultar y adquirir por WhatsApp →
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              Quiero esta capacitación
             </a>
           </article>
+
         </div>
       </div>
     </section>
@@ -833,6 +995,7 @@
     <section class="section contact" id="contacto">
       <div class="container">
         <h2 class="section-title">Contacto</h2>
+
         <p class="section-subtitle">
           Ponete en contacto o seguí mis contenidos en las redes.
         </p>
@@ -844,14 +1007,16 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            WhatsApp →
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            WhatsApp
           </a>
 
           <a
             class="button button-secondary"
             href="mailto:lic.marianelaexner@gmail.com"
           >
-            Email →
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+            Email
           </a>
 
           <a
@@ -860,7 +1025,8 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            Instagram →
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            Instagram
           </a>
 
           <a
@@ -869,16 +1035,19 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            Podcast en Spotify →
+            <i class="fa-brands fa-spotify" aria-hidden="true"></i>
+            Podcast en Spotify
           </a>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer>
     <p>© Marianela Exner · Lic. en Psicopedagogía.</p>
     <p>Todos los derechos reservados.</p>
   </footer>
+
 </body>
 </html>
